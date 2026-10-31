@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="ירין" />
+  <meta name="theme-color" content="#F6F5F0" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" href="./icon.svg" />
+  <title>ירין — מעקב משקל וכושר</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --safe-top: env(safe-area-inset-top, 16px);
+      --safe-bottom: env(safe-area-inset-bottom, 20px);
+      --bg-alabaster: #F6F5F0;
+      --card-surface: #FFFFFF;
+      --border-warm: #E8E6DF;
+      --text-ink: #1C1B18;
+      --text-muted: #78756E;
+      --sage: #2D5A43;
+      --sage-soft: #EAF1ED;
+      --terracotta: #D96B43;
+      --terracotta-soft: #FDF0EB;
+    }
+
+    * {
+      font-family: 'Assistant', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .num-font {
+      font-family: 'Plus Jakarta Sans', 'Assistant', -apple-system, sans-serif;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.03em;
+    }
+
+    body {
+      background-color: var(--bg-alabaster);
+      color: var(--text-ink);
+      padding-top: calc(var(--safe-top) + 12px);
+      padding-bottom: calc(var(--safe-bottom) + 92px);
+      overflow-x: hidden;
+      user-select: none;
+    }
+
+    .editorial-card {
+      background: #FFFFFF;
+      border: 1px solid #EAE8E1;
+      border-radius: 24px;
+      box-shadow: 0 2px 14px rgba(28, 27, 24, 0.035), 0 1px 2px rgba(28, 27, 24, 0.02);
+    }
+
+    .subtle-pill {
+      background: #F0EFEA;
+      border: 1px solid #E5E3DC;
+    }
+
+    .sage-btn {
+      background-color: #2D5A43;
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px -4px rgba(45, 90, 67, 0.35);
+    }
+    .sage-btn:active {
+      transform: scale(0.985);
+      background-color: #234735;
+    }
+
+    .nav-bar-blur {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid #EAE8E1;
+    }
+
+    .tab-btn {
+      color: #9A978F;
+      transition: all 0.2s ease;
+    }
+    .tab-btn.active {
+      color: #2D5A43;
+    }
+    .tab-btn.active .nav-icon-wrap {
+      background-color: #EAF1ED;
+      color: #2D5A43;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D8D5CD;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+
+  <!-- Editorial Header -->
+  <header class="px-5 mb-5 max-w-md mx-auto flex items-center justify-between">
+    <div>
+      <div class="flex items-center gap-2">
+        <span id="currentWeekBadge" class="text-[11px] font-bold tracking-wide px-2.5 py-0.5 rounded-full bg-[#EAF1ED] text-[#2D5A43]">שבוע 67</span>
+        <span class="text-xs text-[#78756E] font-medium">התחלה: 70.0 ק״ג</span>
+      </div>
+      <h1 class="text-2xl font-extrabold tracking-tight text-[#1C1B18] mt-0.5">המעקב של ירין</h1>
+    </div>
+
+    <button onclick="openSettingsModal()" class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#EAE8E1] shadow-sm text-xs font-semibold text-[#1C1B18] active:scale-95 transition">
+      <span id="syncDot" class="w-2 h-2 rounded-full bg-[#2D5A43]"></span>
+      <span id="syncStatusText">ענן וגישה מרחוק</span>
+      <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5 text-[#78756E]"></i>
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <main class="px-5 max-w-md mx-auto space-y-4">
+
+    <!-- ================= TAB 1: DAILY WEIGHT ================= -->
+    <section id="tab-weight" class="space-y-4">
+
+      <!-- Clean Editorial KPI Strip -->
+      <div class="grid grid-cols-3 gap-2.5">
+        <div class="editorial-card p-3.5">
+          <div class="text-[11px] font-semibold text-[#78756E] flex items-center justify-between">
+            <span>משקל אחרון</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#2D5A43]"></span>
+          </div>
+          <div class="mt-1.5 flex items-baseline gap-1">
+            <span id="kpiCurrentWeight" class="num-font text-2xl font-extrabold text-[#1C1B18]">--</span>
+            <span class="text-[11px] font-medium text-[#78756E]">ק״ג</span>
+          </div>
+          <div id="kpiTotalGain" class="mt-1 text-[11px] font-bold text-[#2D5A43]">+0.0 מההתחלה</div>
+        </div>
+
+        <div class="editorial-card p-3.5">
+          <div class="text-[11px] font-semibold text-[#78756E] flex items-center justify-between">
+            <span>ממוצע 7 ימים</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-[#D96B43]"></span>
+          </div>
+          <div class="mt-1.5 flex items-baseline gap-1">
+            <span id="kpiWeeklyAvg" class="num-font text-2xl font-extrabold text-[#1C1B18]">--</span>
+            <span class="text-[11px] font-medium text-[#78756E]">ק״ג</span>
+          </div>
+          <div id="kpiWeeklyDiff" class="mt-1 text-[11px] font-semibold text-[#78756E]">מול שבוע שעבר</div>
+        </div>
+
+        <div class="editorial-card p-3.5">
+          <div class="text-[11px] font-semibold text-[#78756E] flex items-center justify-between">
+            <span>תחזית שבועית</span>
+            <i data-lucide="compass" class="w-3.5 h-3.5 text-[#78756E]"></i>
+          </div>
+          <div class="mt-1.5 flex items-baseline gap-1">
+            <span id="kpiForecastWeight" class="num-font text-2xl font-extrabold text-[#1C1B18]">--</span>
+            <span class="text-[11px] font-medium text-[#78756E]">ק״ג</span>
+          </div>
+          <div id="kpiForecastStatus" class="mt-1 text-[11px] font-semibold text-[#D96B43]">עמידה ביעד</div>
+        </div>
+      </div>
+
+      <!-- Hero Daily Weight Card (Apple Health / Notion Vibe) -->
+      <div class="editorial-card p-5">
+        <!-- Date Navigation Header -->
+        <div class="flex items-center justify-between pb-3.5 border-b border-[#F0EFEA]">
+          <div>
+            <h2 class="font-bold text-base text-[#1C1B18]">שקילה יומית</h2>
+            <p id="logDayDiffBadge" class="text-[11px] font-medium text-[#78756E]">הזן את המשקל להיום</p>
+          </div>
+
+          <div class="flex items-center gap-1 subtle-pill rounded-xl p-1">
+            <button onclick="shiftSelectedDate(-1)" class="w-7 h-7 rounded-lg hover:bg-white flex items-center justify-center text-[#1C1B18] active:scale-90 transition">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+            <input type="date" id="logDateInput" onchange="onDateChange()" class="bg-transparent text-xs font-bold text-[#1C1B18] px-1.5 focus:outline-none" />
+            <button onclick="shiftSelectedDate(1)" class="w-7 h-7 rounded-lg hover:bg-white flex items-center justify-center text-[#1C1B18] active:scale-90 transition">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Big Tactile Weight Display -->
+        <div class="py-5 flex items-center justify-between">
+          <button onclick="stepWeight(-0.1)" class="w-12 h-12 rounded-2xl subtle-pill hover:bg-[#E5E3DC] active:scale-90 transition flex items-center justify-center text-[#1C1B18] text-2xl font-semibold">
+            −
+          </button>
+
+          <div class="flex flex-col items-center">
+            <div class="flex items-baseline gap-1.5">
+              <input type="number" id="logWeightInput" step="0.1" min="40" max="150"
+                class="num-font w-32 text-center bg-transparent text-5xl font-extrabold text-[#1C1B18] focus:outline-none"
+                value="78.5" />
+              <span class="text-sm font-bold text-[#78756E]">ק״ג</span>
+            </div>
+          </div>
+
+          <button onclick="stepWeight(0.1)" class="w-12 h-12 rounded-2xl subtle-pill hover:bg-[#E5E3DC] active:scale-90 transition flex items-center justify-center text-[#1C1B18] text-2xl font-semibold">
+            +
+          </button>
+        </div>
+
+        <!-- Fine Tune Quick Pills -->
+        <div class="flex items-center justify-center gap-1.5 mb-4">
+          <button onclick="stepWeight(-0.5)" class="num-font px-3 py-1.5 rounded-xl subtle-pill text-xs font-semibold text-[#57544E] active:scale-95">-0.5</button>
+          <button onclick="stepWeight(-0.1)" class="num-font px-3 py-1.5 rounded-xl subtle-pill text-xs font-semibold text-[#57544E] active:scale-95">-0.1</button>
+          <button onclick="setToYesterdayWeight()" class="px-3.5 py-1.5 rounded-xl bg-[#EAF1ED] text-xs font-bold text-[#2D5A43] active:scale-95">משקל אחרון</button>
+          <button onclick="stepWeight(0.1)" class="num-font px-3 py-1.5 rounded-xl subtle-pill text-xs font-semibold text-[#57544E] active:scale-95">+0.1</button>
+          <button onclick="stepWeight(0.5)" class="num-font px-3 py-1.5 rounded-xl subtle-pill text-xs font-semibold text-[#57544E] active:scale-95">+0.5</button>
+        </div>
+
+        <!-- Time & Note Inputs -->
+        <div class="grid grid-cols-12 gap-2.5 mb-4">
+          <div class="col-span-4 subtle-pill rounded-xl px-3 py-2.5 flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-[#78756E] shrink-0"></i>
+            <input type="time" id="logTimeInput" class="num-font bg-transparent text-xs font-bold text-[#1C1B18] w-full focus:outline-none" />
+          </div>
+          <div class="col-span-8 subtle-pill rounded-xl px-3 py-2.5 flex items-center gap-2">
+            <i data-lucide="pen-line" class="w-4 h-4 text-[#78756E] shrink-0"></i>
+            <input type="text" id="logNoteInput" placeholder="הערה (למשל: אחרי אימון / שבת)..." class="bg-transparent text-xs font-medium text-[#1C1B18] w-full focus:outline-none placeholder:text-[#9A978F]" />
+          </div>
+        </div>
+
+        <!-- Primary Action Button -->
+        <button id="saveWeightBtn" onclick="saveDailyWeight()" class="w-full py-3.5 rounded-2xl sage-btn font-bold text-sm transition flex items-center justify-center gap-2">
+          <i data-lucide="check" class="w-4 h-4"></i>
+          <span>שמור שקילה</span>
+        </button>
+      </div>
+
+      <!-- Minimalist Trend Chart Card -->
+      <div class="editorial-card p-5">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="font-bold text-sm text-[#1C1B18]">מגמת משקל</h3>
+            <p class="text-[11px] text-[#78756E]">קו ירוק: משקל יומי • מקווקו כתום: ממוצע נע (7 ימים)</p>
+          </div>
+          <div class="flex subtle-pill p-0.5 rounded-xl text-[11px] font-bold">
+            <button onclick="setChartRange('14d')" id="range-14d" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">14 י׳</button>
+            <button onclick="setChartRange('30d')" id="range-30d" class="px-2.5 py-1 rounded-lg bg-white text-[#1C1B18] shadow-sm transition">חודש</button>
+            <button onclick="setChartRange('90d')" id="range-90d" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">3 ח׳</button>
+            <button onclick="setChartRange('all')" id="range-all" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">הכל</button>
+          </div>
+        </div>
+        <div class="h-52 w-full relative">
+          <canvas id="weightChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Weekly Milestones Horizontal Scroll -->
+      <div class="editorial-card p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-sm text-[#1C1B18]">ממוצעים שבועיים מול תחזית</h3>
+          <span class="text-[11px] font-medium text-[#78756E]">החלק הצידה ⬅️</span>
+        </div>
+        <div id="weeklySummaryStrip" class="flex gap-2.5 overflow-x-auto pb-1"></div>
+      </div>
+
+      <!-- Clean Journal History List -->
+      <div class="editorial-card p-5">
+        <div class="flex items-center justify-between mb-3.5">
+          <h3 class="font-bold text-sm text-[#1C1B18]">יומן שקילות (409 רשומות)</h3>
+          <div class="subtle-pill rounded-xl px-2.5 py-1 flex items-center gap-1.5">
+            <i data-lucide="search" class="w-3.5 h-3.5 text-[#78756E]"></i>
+            <input type="text" id="historySearchInput" oninput="renderWeightHistory()" placeholder="חיפוש תאריך או הערה..." class="bg-transparent text-xs text-[#1C1B18] w-28 focus:outline-none placeholder:text-[#9A978F]" />
+          </div>
+        </div>
+        <div id="weightHistoryList" class="divide-y divide-[#F0EFEA] max-h-80 overflow-y-auto pl-1"></div>
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 2: MEASUREMENTS (היקפים) ================= -->
+    <section id="tab-measurements" class="space-y-4 hidden">
+      <div class="editorial-card p-5">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="font-bold text-base text-[#1C1B18]">מדידות היקפים (ס״מ)</h2>
+            <p class="text-xs text-[#78756E]">מעקב פרופורציות ושינוי באחוזים</p>
+          </div>
+          <button onclick="openNewMeasurementModal()" class="px-3.5 py-2 rounded-xl sage-btn font-bold text-xs flex items-center gap-1.5">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span>מדידה חדשה</span>
+          </button>
+        </div>
+
+        <div id="measurementDatePills" class="flex gap-2 overflow-x-auto pb-2 mb-3"></div>
+        <div id="measurementsGrid" class="divide-y divide-[#F0EFEA]"></div>
+      </div>
+
+      <div class="editorial-card p-5">
+        <div class="flex items-center justify-between mb-3">
+          <h3 class="font-bold text-sm text-[#1C1B18]">מגמה לפי אזור בגוף</h3>
+          <select id="measChartSelect" onchange="renderMeasurementChart()" class="subtle-pill rounded-xl px-3 py-1.5 text-xs font-bold text-[#1C1B18] focus:outline-none">
+            <option value="יד קדמית">יד קדמית</option>
+            <option value="אמה">אמה</option>
+            <option value="מותן קו טבור">מותן קו טבור</option>
+            <option value="ישבן">ישבן</option>
+            <option value="ירך גבוה">ירך גבוה</option>
+            <option value="ירך נמוך">ירך נמוך</option>
+            <option value="תאומים גבוה">תאומים גבוה</option>
+          </select>
+        </div>
+        <div class="h-48 w-full relative">
+          <canvas id="measurementChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 3: WORKOUTS (אימונים) ================= -->
+    <section id="tab-workouts" class="space-y-4 hidden">
+      <div class="editorial-card p-5">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="font-bold text-base text-[#1C1B18]">תוכנית אימונים</h2>
+            <p class="text-xs text-[#78756E]">לחץ על המשקל כדי לעדכן שיא חדש</p>
+          </div>
+          <div class="flex subtle-pill p-1 rounded-xl text-xs font-bold">
+            <button onclick="setWorkoutDay('A')" id="btn-day-A" class="px-4 py-1.5 rounded-lg bg-white text-[#1C1B18] shadow-sm transition">אימון A</button>
+            <button onclick="setWorkoutDay('B')" id="btn-day-B" class="px-4 py-1.5 rounded-lg text-[#78756E] transition">אימון B</button>
+          </div>
+        </div>
+
+        <div id="workoutExercisesList" class="space-y-3"></div>
+      </div>
+    </section>
+
+    <!-- ================= TAB 4: NUTRITION & CREATINE ================= -->
+    <section id="tab-nutrition" class="space-y-4 hidden">
+
+      <!-- Creatine Habit Card -->
+      <div class="editorial-card p-5 flex items-center justify-between">
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-2xl bg-[#EAF1ED] flex items-center justify-center text-[#2D5A43]">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-sm text-[#1C1B18]">קריאטין יומי (5 ג׳)</h3>
+            <p id="creatineSubtitle" class="text-xs text-[#78756E]">סימון מהיר להיום</p>
+          </div>
+        </div>
+        <button id="creatineCheckBtn" onclick="toggleTodayCreatine()" class="px-4 py-2.5 rounded-xl font-bold text-xs transition flex items-center gap-1.5"></button>
+      </div>
+
+      <!-- Nutrition Plan Card -->
+      <div class="editorial-card p-5">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="font-bold text-base text-[#1C1B18]">תפריט תזונה יומי</h2>
+            <p id="nutritionMacrosSummary" class="text-xs font-semibold text-[#2D5A43]">יום אימון: ~3,000 קק״ל • 165 ג׳ חלבון</p>
+          </div>
+          <div class="flex subtle-pill p-1 rounded-xl text-xs font-bold">
+            <button onclick="setNutritionDayType('train')" id="btn-nut-train" class="px-3 py-1.5 rounded-lg bg-white text-[#1C1B18] shadow-sm transition">אימון</button>
+            <button onclick="setNutritionDayType('rest')" id="btn-nut-rest" class="px-3 py-1.5 rounded-lg text-[#78756E] transition">מנוחה</button>
+          </div>
+        </div>
+
+        <div id="nutritionMealsList" class="divide-y divide-[#F0EFEA]"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- New Measurement Modal -->
+  <div id="measurementModal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs hidden items-end sm:items-center justify-center p-4">
+    <div class="editorial-card w-full max-w-md p-5 max-h-[85vh] overflow-y-auto space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="font-bold text-base text-[#1C1B18]">הוספת מדידת היקפים</h3>
+        <button onclick="closeNewMeasurementModal()" class="w-8 h-8 rounded-full subtle-pill flex items-center justify-center text-[#78756E]">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <div>
+        <label class="text-xs font-semibold text-[#78756E] block mb-1">תאריך מדידה</label>
+        <input type="date" id="newMeasDate" class="w-full subtle-pill rounded-xl px-3 py-2 text-sm font-bold text-[#1C1B18]" />
+      </div>
+      <div id="newMeasFields" class="space-y-2"></div>
+      <button onclick="saveNewMeasurement()" class="w-full py-3.5 rounded-2xl sage-btn font-bold text-sm">
+        שמור מדידה
+      </button>
+    </div>
+  </div>
+
+  <!-- Cloud & Remote Access Modal -->
+  <div id="settingsModal" class="fixed inset-0 z-50 bg-black/40 backdrop-blur-xs hidden items-end sm:items-center justify-center p-4">
+    <div class="editorial-card w-full max-w-md p-5 max-h-[88vh] overflow-y-auto space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="font-bold text-base text-[#1C1B18]">עבודה מחוץ לבית וגיבוי ענן</h3>
+        <button onclick="closeSettingsModal()" class="w-8 h-8 rounded-full subtle-pill flex items-center justify-center text-[#78756E]">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Cloud Webhook Input -->
+      <div class="subtle-pill rounded-2xl p-4 space-y-2">
+        <div class="font-bold text-xs text-[#2D5A43] flex items-center gap-1.5">
+          <i data-lucide="cloud" class="w-4 h-4"></i>
+          <span>חיבור ישיר ל-Google Sheets מהענן (ללא תלות במחשב)</span>
+        </div>
+        <p class="text-[11px] text-[#57544E] leading-relaxed">
+          כדי שהאפליקציה תעדכן את ה-Google Sheets שלך גם כשאתה מחוץ לבית (על 5G) והמחשב כבוי, הדבק כאן את כתובת ה-Web App של Google Apps Script (הוראות למטה):
+        </p>
+        <input type="url" id="cloudWebhookInput" placeholder="https://script.google.com/macros/s/.../exec"
+          class="w-full bg-white border border-[#E5E3DC] rounded-xl px-3 py-2 text-xs text-[#1C1B18] focus:outline-none" />
+        <button onclick="saveCloudWebhook()" class="w-full py-2 rounded-xl sage-btn text-xs font-bold">
+          שמור חיבור ענן
+        </button>
+      </div>
+
+      <!-- How to use outside home -->
+      <div class="subtle-pill rounded-2xl p-4 space-y-2 text-xs text-[#57544E] leading-relaxed">
+        <div class="font-bold text-[#1C1B18] flex items-center gap-1.5">
+          <i data-lucide="globe" class="w-4 h-4 text-[#D96B43]"></i>
+          <span>איך לפתוח באייפון מכל מקום בעולם (2 דקות):</span>
+        </div>
+        <ol class="list-decimal list-inside space-y-1.5">
+          <li>הנתונים שלך תמיד נשמרים <strong>גם בזיכרון הפנימי של האייפון</strong> (עובד גם בלי אינטרנט).</li>
+          <li>כדי לקבל כתובת `https://` קבועה שלא תלויה במחשב בבית: גרור את תיקיית האפליקציה ל-<strong>app.netlify.com/drop</strong> (חינם לגמרי).</li>
+          <li>פתח את הקישור ב-Safari באייפון ⬅️ <strong>שתף</strong> ⬅️ <strong>הוסף למסך הבית</strong>.</li>
+        </ol>
+      </div>
+
+      <div class="flex gap-2 pt-1">
+        <button onclick="exportDataJson()" class="flex-1 py-2.5 rounded-xl subtle-pill text-xs font-bold text-[#1C1B18] flex items-center justify-center gap-1.5">
+          <i data-lucide="download" class="w-4 h-4"></i>
+          <span>גיבוי קובץ נתונים</span>
+        </button>
+        <button onclick="closeSettingsModal()" class="flex-1 py-2.5 rounded-xl bg-[#1C1B18] text-xs font-bold text-white">
+          סגור
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimalist Toast -->
+  <div id="toast" class="fixed top-12 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-full bg-[#1C1B18] text-white text-xs font-bold shadow-xl flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-[-10px]">
+    <span class="w-2 h-2 rounded-full bg-[#68B684]"></span>
+    <span id="toastText">נשמר בהצלחה</span>
+  </div>
+
+  <!-- Clean Editorial Bottom Tab Bar -->
+  <nav class="fixed bottom-0 inset-x-0 z-40 nav-bar-blur px-4 pt-2 pb-[calc(env(safe-area-inset-bottom,16px)+6px)]">
+    <div class="max-w-md mx-auto grid grid-cols-4 gap-1">
+      <button onclick="switchTab('weight')" id="nav-weight" class="tab-btn active flex flex-col items-center py-1">
+        <div class="nav-icon-wrap px-4 py-1 rounded-full transition-colors mb-0.5">
+          <i data-lucide="scale" class="w-5 h-5"></i>
+        </div>
+        <span class="text-[11px] font-bold">משקל</span>
+      </button>
+
+      <button onclick="switchTab('measurements')" id="nav-measurements" class="tab-btn flex flex-col items-center py-1">
+        <div class="nav-icon-wrap px-4 py-1 rounded-full transition-colors mb-0.5">
+          <i data-lucide="ruler" class="w-5 h-5"></i>
+        </div>
+        <span class="text-[11px] font-bold">היקפים</span>
+      </button>
+
+      <button onclick="switchTab('workouts')" id="nav-workouts" class="tab-btn flex flex-col items-center py-1">
+        <div class="nav-icon-wrap px-4 py-1 rounded-full transition-colors mb-0.5">
+          <i data-lucide="dumbbell" class="w-5 h-5"></i>
+        </div>
+        <span class="text-[11px] font-bold">אימונים</span>
+      </button>
+
+      <button onclick="switchTab('nutrition')" id="nav-nutrition" class="tab-btn flex flex-col items-center py-1">
+        <div class="nav-icon-wrap px-4 py-1 rounded-full transition-colors mb-0.5">
+          <i data-lucide="utensils" class="w-5 h-5"></i>
+        </div>
+        <span class="text-[11px] font-bold">תזונה</span>
+      </button>
+    </div>
+  </nav>
+
+  <script src="./app.js"></script>
+</body>
+</html>

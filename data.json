@@ -1,0 +1,5268 @@
+{
+  "spreadsheetId": "1vOXP9dMe7jbzeNbkMxR_8c3LdLlHKtxoapanhWDfs-Y",
+  "startWeight": 70.0,
+  "startDate": "20/07/2025",
+  "weightEntries": [
+    {
+      "rowIndex": 3,
+      "date": "19/07/2025",
+      "isoDate": "2025-07-19",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 4,
+      "date": "20/07/2025",
+      "isoDate": "2025-07-20",
+      "time": "09:20",
+      "weight": 69.8,
+      "weekTag": "שבוע 1",
+      "note": ""
+    },
+    {
+      "rowIndex": 5,
+      "date": "21/07/2025",
+      "isoDate": "2025-07-21",
+      "time": "12:45",
+      "weight": 71.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 6,
+      "date": "22/07/2025",
+      "isoDate": "2025-07-22",
+      "time": "10:00",
+      "weight": 70.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 7,
+      "date": "23/07/2025",
+      "isoDate": "2025-07-23",
+      "time": "09:00",
+      "weight": 71.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 8,
+      "date": "24/07/2025",
+      "isoDate": "2025-07-24",
+      "time": "09:00",
+      "weight": 71.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 9,
+      "date": "25/07/2025",
+      "isoDate": "2025-07-25",
+      "time": "10:26",
+      "weight": 71.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 10,
+      "date": "26/07/2025",
+      "isoDate": "2025-07-26",
+      "time": "11:30",
+      "weight": 71.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 11,
+      "date": "27/07/2025",
+      "isoDate": "2025-07-27",
+      "time": "10:00",
+      "weight": 71.7,
+      "weekTag": "שבוע 2",
+      "note": ""
+    },
+    {
+      "rowIndex": 12,
+      "date": "28/07/2025",
+      "isoDate": "2025-07-28",
+      "time": "14:00",
+      "weight": 71.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 13,
+      "date": "29/07/2025",
+      "isoDate": "2025-07-29",
+      "time": "09:00",
+      "weight": 71.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 14,
+      "date": "30/07/2025",
+      "isoDate": "2025-07-30",
+      "time": "08:00",
+      "weight": 72.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 15,
+      "date": "31/07/2025",
+      "isoDate": "2025-07-31",
+      "time": "08:42",
+      "weight": 72.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 16,
+      "date": "01/08/2025",
+      "isoDate": "2025-08-01",
+      "time": "09:46",
+      "weight": 71.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 17,
+      "date": "02/08/2025",
+      "isoDate": "2025-08-02",
+      "time": "11:00",
+      "weight": 72.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 18,
+      "date": "03/08/2025",
+      "isoDate": "2025-08-03",
+      "time": "09:33",
+      "weight": 72.3,
+      "weekTag": "שבוע 3",
+      "note": ""
+    },
+    {
+      "rowIndex": 19,
+      "date": "04/08/2025",
+      "isoDate": "2025-08-04",
+      "time": "08:15",
+      "weight": 72.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 20,
+      "date": "05/08/2025",
+      "isoDate": "2025-08-05",
+      "time": "09:30",
+      "weight": 72.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 21,
+      "date": "06/08/2025",
+      "isoDate": "2025-08-06",
+      "time": "10:11",
+      "weight": 72.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 22,
+      "date": "07/08/2025",
+      "isoDate": "2025-08-07",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 23,
+      "date": "08/08/2025",
+      "isoDate": "2025-08-08",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 24,
+      "date": "09/08/2025",
+      "isoDate": "2025-08-09",
+      "time": "17:00",
+      "weight": 72.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 25,
+      "date": "10/08/2025",
+      "isoDate": "2025-08-10",
+      "time": "09:45",
+      "weight": 72.7,
+      "weekTag": "שבוע 4",
+      "note": ""
+    },
+    {
+      "rowIndex": 26,
+      "date": "11/08/2025",
+      "isoDate": "2025-08-11",
+      "time": "09:10",
+      "weight": 72.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 27,
+      "date": "12/08/2025",
+      "isoDate": "2025-08-12",
+      "time": "07:30",
+      "weight": 72.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 28,
+      "date": "13/08/2025",
+      "isoDate": "2025-08-13",
+      "time": "07:40",
+      "weight": 72.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 29,
+      "date": "14/08/2025",
+      "isoDate": "2025-08-14",
+      "time": "09:00",
+      "weight": 73.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 30,
+      "date": "15/08/2025",
+      "isoDate": "2025-08-15",
+      "time": "08:30",
+      "weight": 73.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 31,
+      "date": "16/08/2025",
+      "isoDate": "2025-08-16",
+      "time": "12:30",
+      "weight": 72.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 32,
+      "date": "17/08/2025",
+      "isoDate": "2025-08-17",
+      "time": "09:40",
+      "weight": 72.7,
+      "weekTag": "שבוע 5",
+      "note": ""
+    },
+    {
+      "rowIndex": 33,
+      "date": "18/08/2025",
+      "isoDate": "2025-08-18",
+      "time": "08:30",
+      "weight": 72.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 34,
+      "date": "19/08/2025",
+      "isoDate": "2025-08-19",
+      "time": "09:00",
+      "weight": 72.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 35,
+      "date": "20/08/2025",
+      "isoDate": "2025-08-20",
+      "time": "09:00",
+      "weight": 72.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 36,
+      "date": "21/08/2025",
+      "isoDate": "2025-08-21",
+      "time": "08:20",
+      "weight": 73.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 37,
+      "date": "22/08/2025",
+      "isoDate": "2025-08-22",
+      "time": "10:00",
+      "weight": 73.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 38,
+      "date": "23/08/2025",
+      "isoDate": "2025-08-23",
+      "time": "09:45",
+      "weight": 73.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 39,
+      "date": "24/08/2025",
+      "isoDate": "2025-08-24",
+      "time": "09:20",
+      "weight": 73.1,
+      "weekTag": "שבוע 6",
+      "note": ""
+    },
+    {
+      "rowIndex": 40,
+      "date": "25/08/2025",
+      "isoDate": "2025-08-25",
+      "time": "09:20",
+      "weight": 73.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 41,
+      "date": "26/08/2025",
+      "isoDate": "2025-08-26",
+      "time": "09:45",
+      "weight": 73.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 42,
+      "date": "27/08/2025",
+      "isoDate": "2025-08-27",
+      "time": "09:00",
+      "weight": 73.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 43,
+      "date": "28/08/2025",
+      "isoDate": "2025-08-28",
+      "time": "06:50",
+      "weight": 73.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 44,
+      "date": "29/08/2025",
+      "isoDate": "2025-08-29",
+      "time": "11:00",
+      "weight": 73.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 45,
+      "date": "30/08/2025",
+      "isoDate": "2025-08-30",
+      "time": "11:00",
+      "weight": 73.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 46,
+      "date": "31/08/2025",
+      "isoDate": "2025-08-31",
+      "time": "07:30",
+      "weight": 73.8,
+      "weekTag": "שבוע 7",
+      "note": ""
+    },
+    {
+      "rowIndex": 47,
+      "date": "01/09/2025",
+      "isoDate": "2025-09-01",
+      "time": "07:50",
+      "weight": 73.5,
+      "weekTag": "",
+      "note": "תחילת קריאטין"
+    },
+    {
+      "rowIndex": 48,
+      "date": "02/09/2025",
+      "isoDate": "2025-09-02",
+      "time": "07:20",
+      "weight": 73.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 49,
+      "date": "03/09/2025",
+      "isoDate": "2025-09-03",
+      "time": "07:11",
+      "weight": 74.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 50,
+      "date": "04/09/2025",
+      "isoDate": "2025-09-04",
+      "time": "09:00",
+      "weight": 74.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 51,
+      "date": "05/09/2025",
+      "isoDate": "2025-09-05",
+      "time": "14:40",
+      "weight": 73.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 52,
+      "date": "06/09/2025",
+      "isoDate": "2025-09-06",
+      "time": "11:00",
+      "weight": 73.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 53,
+      "date": "07/09/2025",
+      "isoDate": "2025-09-07",
+      "time": "09:11",
+      "weight": 74.4,
+      "weekTag": "שבוע 8",
+      "note": ""
+    },
+    {
+      "rowIndex": 54,
+      "date": "08/09/2025",
+      "isoDate": "2025-09-08",
+      "time": "08:45",
+      "weight": 73.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 55,
+      "date": "09/09/2025",
+      "isoDate": "2025-09-09",
+      "time": "09:00",
+      "weight": 73.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 56,
+      "date": "10/09/2025",
+      "isoDate": "2025-09-10",
+      "time": "05:30",
+      "weight": 74.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 57,
+      "date": "11/09/2025",
+      "isoDate": "2025-09-11",
+      "time": "09:12",
+      "weight": 74.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 58,
+      "date": "12/09/2025",
+      "isoDate": "2025-09-12",
+      "time": "10:44",
+      "weight": 75.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 59,
+      "date": "13/09/2025",
+      "isoDate": "2025-09-13",
+      "time": "09:30",
+      "weight": 75.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 60,
+      "date": "14/09/2025",
+      "isoDate": "2025-09-14",
+      "time": "08:12",
+      "weight": 75.7,
+      "weekTag": "שבוע 9",
+      "note": ""
+    },
+    {
+      "rowIndex": 61,
+      "date": "15/09/2025",
+      "isoDate": "2025-09-15",
+      "time": "08:00",
+      "weight": 75.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 62,
+      "date": "16/09/2025",
+      "isoDate": "2025-09-16",
+      "time": "07:40",
+      "weight": 75.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 63,
+      "date": "17/09/2025",
+      "isoDate": "2025-09-17",
+      "time": "08:03",
+      "weight": 75.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 64,
+      "date": "18/09/2025",
+      "isoDate": "2025-09-18",
+      "time": "10:29",
+      "weight": 75.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 65,
+      "date": "19/09/2025",
+      "isoDate": "2025-09-19",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 66,
+      "date": "20/09/2025",
+      "isoDate": "2025-09-20",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 67,
+      "date": "21/09/2025",
+      "isoDate": "2025-09-21",
+      "time": "10:00",
+      "weight": 75.0,
+      "weekTag": "שבוע 10",
+      "note": ""
+    },
+    {
+      "rowIndex": 68,
+      "date": "22/09/2025",
+      "isoDate": "2025-09-22",
+      "time": "09:20",
+      "weight": 74.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 69,
+      "date": "23/09/2025",
+      "isoDate": "2025-09-23",
+      "time": "10:34",
+      "weight": 74.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 70,
+      "date": "24/09/2025",
+      "isoDate": "2025-09-24",
+      "time": "11:42",
+      "weight": 75.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 71,
+      "date": "25/09/2025",
+      "isoDate": "2025-09-25",
+      "time": "07:44",
+      "weight": 75.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 72,
+      "date": "26/09/2025",
+      "isoDate": "2025-09-26",
+      "time": "11:40",
+      "weight": 74.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 73,
+      "date": "27/09/2025",
+      "isoDate": "2025-09-27",
+      "time": "11:06",
+      "weight": 74.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 74,
+      "date": "28/09/2025",
+      "isoDate": "2025-09-28",
+      "time": "11:06",
+      "weight": 75.4,
+      "weekTag": "שבוע 11",
+      "note": ""
+    },
+    {
+      "rowIndex": 75,
+      "date": "29/09/2025",
+      "isoDate": "2025-09-29",
+      "time": "08:28",
+      "weight": 76.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 76,
+      "date": "30/09/2025",
+      "isoDate": "2025-09-30",
+      "time": "07:52",
+      "weight": 76.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 77,
+      "date": "01/10/2025",
+      "isoDate": "2025-10-01",
+      "time": "07:42",
+      "weight": 76.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 78,
+      "date": "02/10/2025",
+      "isoDate": "2025-10-02",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 79,
+      "date": "03/10/2025",
+      "isoDate": "2025-10-03",
+      "time": "08:52",
+      "weight": 75.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 80,
+      "date": "04/10/2025",
+      "isoDate": "2025-10-04",
+      "time": "07:06",
+      "weight": 75.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 81,
+      "date": "05/10/2025",
+      "isoDate": "2025-10-05",
+      "time": "07:45",
+      "weight": 76.4,
+      "weekTag": "שבוע 12",
+      "note": ""
+    },
+    {
+      "rowIndex": 82,
+      "date": "06/10/2025",
+      "isoDate": "2025-10-06",
+      "time": "08:16",
+      "weight": 75.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 83,
+      "date": "07/10/2025",
+      "isoDate": "2025-10-07",
+      "time": "10:45",
+      "weight": 75.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 84,
+      "date": "08/10/2025",
+      "isoDate": "2025-10-08",
+      "time": "09:15",
+      "weight": 75.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 85,
+      "date": "09/10/2025",
+      "isoDate": "2025-10-09",
+      "time": "08:32",
+      "weight": 75.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 86,
+      "date": "10/10/2025",
+      "isoDate": "2025-10-10",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 87,
+      "date": "11/10/2025",
+      "isoDate": "2025-10-11",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 88,
+      "date": "12/10/2025",
+      "isoDate": "2025-10-12",
+      "time": "",
+      "weight": null,
+      "weekTag": "שבוע 13",
+      "note": ""
+    },
+    {
+      "rowIndex": 89,
+      "date": "13/10/2025",
+      "isoDate": "2025-10-13",
+      "time": "08:30",
+      "weight": 74.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 90,
+      "date": "14/10/2025",
+      "isoDate": "2025-10-14",
+      "time": "08:30",
+      "weight": 75.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 91,
+      "date": "15/10/2025",
+      "isoDate": "2025-10-15",
+      "time": "10:00",
+      "weight": 74.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 92,
+      "date": "16/10/2025",
+      "isoDate": "2025-10-16",
+      "time": "07:55",
+      "weight": 74.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 93,
+      "date": "17/10/2025",
+      "isoDate": "2025-10-17",
+      "time": "12:24",
+      "weight": 74.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 94,
+      "date": "18/10/2025",
+      "isoDate": "2025-10-18",
+      "time": "12:00",
+      "weight": 75.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 95,
+      "date": "19/10/2025",
+      "isoDate": "2025-10-19",
+      "time": "08:30",
+      "weight": 76.0,
+      "weekTag": "שבוע 14",
+      "note": ""
+    },
+    {
+      "rowIndex": 96,
+      "date": "20/10/2025",
+      "isoDate": "2025-10-20",
+      "time": "08:15",
+      "weight": 75.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 97,
+      "date": "21/10/2025",
+      "isoDate": "2025-10-21",
+      "time": "09:30",
+      "weight": 75.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 98,
+      "date": "22/10/2025",
+      "isoDate": "2025-10-22",
+      "time": "07:00",
+      "weight": 75.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 99,
+      "date": "23/10/2025",
+      "isoDate": "2025-10-23",
+      "time": "",
+      "weight": 75.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 100,
+      "date": "24/10/2025",
+      "isoDate": "2025-10-24",
+      "time": "11:30",
+      "weight": 75.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 101,
+      "date": "25/10/2025",
+      "isoDate": "2025-10-25",
+      "time": "09:30",
+      "weight": 75.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 102,
+      "date": "26/10/2025",
+      "isoDate": "2025-10-26",
+      "time": "07:00",
+      "weight": 76.0,
+      "weekTag": "שבוע 15",
+      "note": ""
+    },
+    {
+      "rowIndex": 103,
+      "date": "27/10/2025",
+      "isoDate": "2025-10-27",
+      "time": "07:15",
+      "weight": 76.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 104,
+      "date": "28/10/2025",
+      "isoDate": "2025-10-28",
+      "time": "07:00",
+      "weight": 75.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 105,
+      "date": "29/10/2025",
+      "isoDate": "2025-10-29",
+      "time": "07:09",
+      "weight": 76.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 106,
+      "date": "30/10/2025",
+      "isoDate": "2025-10-30",
+      "time": "07:41",
+      "weight": 76.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 107,
+      "date": "31/10/2025",
+      "isoDate": "2025-10-31",
+      "time": "09:44",
+      "weight": 76.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 108,
+      "date": "01/11/2025",
+      "isoDate": "2025-11-01",
+      "time": "11:30",
+      "weight": 76.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 109,
+      "date": "02/11/2025",
+      "isoDate": "2025-11-02",
+      "time": "07:00",
+      "weight": 76.9,
+      "weekTag": "שבוע 16",
+      "note": ""
+    },
+    {
+      "rowIndex": 110,
+      "date": "03/11/2025",
+      "isoDate": "2025-11-03",
+      "time": "06:40",
+      "weight": 76.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 111,
+      "date": "04/11/2025",
+      "isoDate": "2025-11-04",
+      "time": "07:24",
+      "weight": 76.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 112,
+      "date": "05/11/2025",
+      "isoDate": "2025-11-05",
+      "time": "06:51",
+      "weight": 77.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 113,
+      "date": "06/11/2025",
+      "isoDate": "2025-11-06",
+      "time": "07:00",
+      "weight": 76.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 114,
+      "date": "07/11/2025",
+      "isoDate": "2025-11-07",
+      "time": "10:00",
+      "weight": 76.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 115,
+      "date": "08/11/2025",
+      "isoDate": "2025-11-08",
+      "time": "09:56",
+      "weight": 76.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 116,
+      "date": "09/11/2025",
+      "isoDate": "2025-11-09",
+      "time": "06:46",
+      "weight": 77.6,
+      "weekTag": "שבוע 17",
+      "note": ""
+    },
+    {
+      "rowIndex": 117,
+      "date": "10/11/2025",
+      "isoDate": "2025-11-10",
+      "time": "06:38",
+      "weight": 77.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 118,
+      "date": "11/11/2025",
+      "isoDate": "2025-11-11",
+      "time": "06:50",
+      "weight": 77.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 119,
+      "date": "12/11/2025",
+      "isoDate": "2025-11-12",
+      "time": "07:43",
+      "weight": 78.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 120,
+      "date": "13/11/2025",
+      "isoDate": "2025-11-13",
+      "time": "09:13",
+      "weight": 77.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 121,
+      "date": "14/11/2025",
+      "isoDate": "2025-11-14",
+      "time": "09:28",
+      "weight": 77.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 122,
+      "date": "15/11/2025",
+      "isoDate": "2025-11-15",
+      "time": "07:13",
+      "weight": 77.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 123,
+      "date": "16/11/2025",
+      "isoDate": "2025-11-16",
+      "time": "05:16",
+      "weight": 77.7,
+      "weekTag": "שבוע 18",
+      "note": ""
+    },
+    {
+      "rowIndex": 124,
+      "date": "17/11/2025",
+      "isoDate": "2025-11-17",
+      "time": "07:03",
+      "weight": 77.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 125,
+      "date": "18/11/2025",
+      "isoDate": "2025-11-18",
+      "time": "07:02",
+      "weight": 77.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 126,
+      "date": "19/11/2025",
+      "isoDate": "2025-11-19",
+      "time": "05:20",
+      "weight": 77.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 127,
+      "date": "20/11/2025",
+      "isoDate": "2025-11-20",
+      "time": "06:46",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 128,
+      "date": "21/11/2025",
+      "isoDate": "2025-11-21",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 129,
+      "date": "22/11/2025",
+      "isoDate": "2025-11-22",
+      "time": "08:13",
+      "weight": 77.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 130,
+      "date": "23/11/2025",
+      "isoDate": "2025-11-23",
+      "time": "07:00",
+      "weight": 78.0,
+      "weekTag": "שבוע 19",
+      "note": ""
+    },
+    {
+      "rowIndex": 131,
+      "date": "24/11/2025",
+      "isoDate": "2025-11-24",
+      "time": "08:00",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 132,
+      "date": "25/11/2025",
+      "isoDate": "2025-11-25",
+      "time": "07:41",
+      "weight": 77.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 133,
+      "date": "26/11/2025",
+      "isoDate": "2025-11-26",
+      "time": "07:14",
+      "weight": 78.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 134,
+      "date": "27/11/2025",
+      "isoDate": "2025-11-27",
+      "time": "07:05",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 135,
+      "date": "28/11/2025",
+      "isoDate": "2025-11-28",
+      "time": "09:00",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 136,
+      "date": "29/11/2025",
+      "isoDate": "2025-11-29",
+      "time": "08:39",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 137,
+      "date": "30/11/2025",
+      "isoDate": "2025-11-30",
+      "time": "07:45",
+      "weight": 78.9,
+      "weekTag": "שבוע 20",
+      "note": ""
+    },
+    {
+      "rowIndex": 138,
+      "date": "01/12/2025",
+      "isoDate": "2025-12-01",
+      "time": "08:57",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 139,
+      "date": "02/12/2025",
+      "isoDate": "2025-12-02",
+      "time": "07:30",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 140,
+      "date": "03/12/2025",
+      "isoDate": "2025-12-03",
+      "time": "08:38",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 141,
+      "date": "04/12/2025",
+      "isoDate": "2025-12-04",
+      "time": "08:00",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 142,
+      "date": "05/12/2025",
+      "isoDate": "2025-12-05",
+      "time": "10:45",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 143,
+      "date": "06/12/2025",
+      "isoDate": "2025-12-06",
+      "time": "11:30",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 144,
+      "date": "07/12/2025",
+      "isoDate": "2025-12-07",
+      "time": "07:18",
+      "weight": 78.1,
+      "weekTag": "שבוע 21",
+      "note": ""
+    },
+    {
+      "rowIndex": 145,
+      "date": "08/12/2025",
+      "isoDate": "2025-12-08",
+      "time": "07:06",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 146,
+      "date": "09/12/2025",
+      "isoDate": "2025-12-09",
+      "time": "07:07",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 147,
+      "date": "10/12/2025",
+      "isoDate": "2025-12-10",
+      "time": "09:00",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 148,
+      "date": "11/12/2025",
+      "isoDate": "2025-12-11",
+      "time": "08:42",
+      "weight": 79.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 149,
+      "date": "12/12/2025",
+      "isoDate": "2025-12-12",
+      "time": "07:44",
+      "weight": 79.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 150,
+      "date": "13/12/2025",
+      "isoDate": "2025-12-13",
+      "time": "08:56",
+      "weight": 79.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 151,
+      "date": "14/12/2025",
+      "isoDate": "2025-12-14",
+      "time": "07:12",
+      "weight": 79.3,
+      "weekTag": "שבוע 22",
+      "note": ""
+    },
+    {
+      "rowIndex": 152,
+      "date": "15/12/2025",
+      "isoDate": "2025-12-15",
+      "time": "07:12",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 153,
+      "date": "16/12/2025",
+      "isoDate": "2025-12-16",
+      "time": "07:41",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 154,
+      "date": "17/12/2025",
+      "isoDate": "2025-12-17",
+      "time": "08:41",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 155,
+      "date": "18/12/2025",
+      "isoDate": "2025-12-18",
+      "time": "08:10",
+      "weight": 79.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 156,
+      "date": "19/12/2025",
+      "isoDate": "2025-12-19",
+      "time": "08:42",
+      "weight": 79.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 157,
+      "date": "20/12/2025",
+      "isoDate": "2025-12-20",
+      "time": "09:17",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 158,
+      "date": "21/12/2025",
+      "isoDate": "2025-12-21",
+      "time": "08:31",
+      "weight": 79.4,
+      "weekTag": "שבוע 23",
+      "note": ""
+    },
+    {
+      "rowIndex": 159,
+      "date": "22/12/2025",
+      "isoDate": "2025-12-22",
+      "time": "07:14",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 160,
+      "date": "23/12/2025",
+      "isoDate": "2025-12-23",
+      "time": "17:30",
+      "weight": 79.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 161,
+      "date": "24/12/2025",
+      "isoDate": "2025-12-24",
+      "time": "07:22",
+      "weight": 79.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 162,
+      "date": "25/12/2025",
+      "isoDate": "2025-12-25",
+      "time": "07:33",
+      "weight": 80.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 163,
+      "date": "26/12/2025",
+      "isoDate": "2025-12-26",
+      "time": "10:00",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 164,
+      "date": "27/12/2025",
+      "isoDate": "2025-12-27",
+      "time": "10:40",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 165,
+      "date": "28/12/2025",
+      "isoDate": "2025-12-28",
+      "time": "07:53",
+      "weight": 79.0,
+      "weekTag": "שבוע 24",
+      "note": ""
+    },
+    {
+      "rowIndex": 166,
+      "date": "29/12/2025",
+      "isoDate": "2025-12-29",
+      "time": "08:41",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 167,
+      "date": "30/12/2025",
+      "isoDate": "2025-12-30",
+      "time": "12:26",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 168,
+      "date": "31/12/2025",
+      "isoDate": "2025-12-31",
+      "time": "06:25",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 169,
+      "date": "01/01/2026",
+      "isoDate": "2026-01-01",
+      "time": "06:39",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 170,
+      "date": "02/01/2026",
+      "isoDate": "2026-01-02",
+      "time": "18:22",
+      "weight": 79.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 171,
+      "date": "03/01/2026",
+      "isoDate": "2026-01-03",
+      "time": "10:10",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 172,
+      "date": "04/01/2026",
+      "isoDate": "2026-01-04",
+      "time": "",
+      "weight": null,
+      "weekTag": "שבוע 25",
+      "note": ""
+    },
+    {
+      "rowIndex": 173,
+      "date": "05/01/2026",
+      "isoDate": "2026-01-05",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 174,
+      "date": "06/01/2026",
+      "isoDate": "2026-01-06",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 175,
+      "date": "07/01/2026",
+      "isoDate": "2026-01-07",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 176,
+      "date": "08/01/2026",
+      "isoDate": "2026-01-08",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 177,
+      "date": "09/01/2026",
+      "isoDate": "2026-01-09",
+      "time": "08:00",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 178,
+      "date": "10/01/2026",
+      "isoDate": "2026-01-10",
+      "time": "10:00",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 179,
+      "date": "11/01/2026",
+      "isoDate": "2026-01-11",
+      "time": "08:00",
+      "weight": 78.9,
+      "weekTag": "שבוע 26",
+      "note": ""
+    },
+    {
+      "rowIndex": 180,
+      "date": "12/01/2026",
+      "isoDate": "2026-01-12",
+      "time": "07:19",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 181,
+      "date": "13/01/2026",
+      "isoDate": "2026-01-13",
+      "time": "08:20",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 182,
+      "date": "14/01/2026",
+      "isoDate": "2026-01-14",
+      "time": "09:00",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 183,
+      "date": "15/01/2026",
+      "isoDate": "2026-01-15",
+      "time": "07:47",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 184,
+      "date": "16/01/2026",
+      "isoDate": "2026-01-16",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 185,
+      "date": "17/01/2026",
+      "isoDate": "2026-01-17",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 186,
+      "date": "18/01/2026",
+      "isoDate": "2026-01-18",
+      "time": "07:38",
+      "weight": 78.0,
+      "weekTag": "שבוע 27",
+      "note": ""
+    },
+    {
+      "rowIndex": 187,
+      "date": "19/01/2026",
+      "isoDate": "2026-01-19",
+      "time": "09:36",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 188,
+      "date": "20/01/2026",
+      "isoDate": "2026-01-20",
+      "time": "08:36",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 189,
+      "date": "21/01/2026",
+      "isoDate": "2026-01-21",
+      "time": "07:30",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 190,
+      "date": "22/01/2026",
+      "isoDate": "2026-01-22",
+      "time": "08:00",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 191,
+      "date": "23/01/2026",
+      "isoDate": "2026-01-23",
+      "time": "10:00",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 192,
+      "date": "24/01/2026",
+      "isoDate": "2026-01-24",
+      "time": "10:29",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 193,
+      "date": "25/01/2026",
+      "isoDate": "2026-01-25",
+      "time": "06:29",
+      "weight": 78.8,
+      "weekTag": "שבוע 28",
+      "note": ""
+    },
+    {
+      "rowIndex": 194,
+      "date": "26/01/2026",
+      "isoDate": "2026-01-26",
+      "time": "08:20",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 195,
+      "date": "27/01/2026",
+      "isoDate": "2026-01-27",
+      "time": "05:15",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 196,
+      "date": "28/01/2026",
+      "isoDate": "2026-01-28",
+      "time": "07:44",
+      "weight": 78.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 197,
+      "date": "29/01/2026",
+      "isoDate": "2026-01-29",
+      "time": "09:09",
+      "weight": 78.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 198,
+      "date": "30/01/2026",
+      "isoDate": "2026-01-30",
+      "time": "10:12",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 199,
+      "date": "31/01/2026",
+      "isoDate": "2026-01-31",
+      "time": "11:20",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 200,
+      "date": "01/02/2026",
+      "isoDate": "2026-02-01",
+      "time": "07:29",
+      "weight": 78.4,
+      "weekTag": "שבוע 29",
+      "note": ""
+    },
+    {
+      "rowIndex": 201,
+      "date": "02/02/2026",
+      "isoDate": "2026-02-02",
+      "time": "08:02",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 202,
+      "date": "03/02/2026",
+      "isoDate": "2026-02-03",
+      "time": "00:00",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 203,
+      "date": "04/02/2026",
+      "isoDate": "2026-02-04",
+      "time": "07:45",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 204,
+      "date": "05/02/2026",
+      "isoDate": "2026-02-05",
+      "time": "09:32",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 205,
+      "date": "06/02/2026",
+      "isoDate": "2026-02-06",
+      "time": "08:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 206,
+      "date": "07/02/2026",
+      "isoDate": "2026-02-07",
+      "time": "10:00",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 207,
+      "date": "08/02/2026",
+      "isoDate": "2026-02-08",
+      "time": "07:10",
+      "weight": 79.0,
+      "weekTag": "שבוע 30",
+      "note": ""
+    },
+    {
+      "rowIndex": 208,
+      "date": "09/02/2026",
+      "isoDate": "2026-02-09",
+      "time": "07:43",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 209,
+      "date": "10/02/2026",
+      "isoDate": "2026-02-10",
+      "time": "07:15",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 210,
+      "date": "11/02/2026",
+      "isoDate": "2026-02-11",
+      "time": "09:26",
+      "weight": 78.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 211,
+      "date": "12/02/2026",
+      "isoDate": "2026-02-12",
+      "time": "05:30",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 212,
+      "date": "13/02/2026",
+      "isoDate": "2026-02-13",
+      "time": "09:33",
+      "weight": 77.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 213,
+      "date": "14/02/2026",
+      "isoDate": "2026-02-14",
+      "time": "11:38",
+      "weight": 77.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 214,
+      "date": "15/02/2026",
+      "isoDate": "2026-02-15",
+      "time": "07:31",
+      "weight": 78.9,
+      "weekTag": "שבוע 31",
+      "note": ""
+    },
+    {
+      "rowIndex": 215,
+      "date": "16/02/2026",
+      "isoDate": "2026-02-16",
+      "time": "06:40",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 216,
+      "date": "17/02/2026",
+      "isoDate": "2026-02-17",
+      "time": "08:00",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 217,
+      "date": "18/02/2026",
+      "isoDate": "2026-02-18",
+      "time": "09:15",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 218,
+      "date": "19/02/2026",
+      "isoDate": "2026-02-19",
+      "time": "07:00",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 219,
+      "date": "20/02/2026",
+      "isoDate": "2026-02-20",
+      "time": "08:11",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 220,
+      "date": "21/02/2026",
+      "isoDate": "2026-02-21",
+      "time": "08:11",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 221,
+      "date": "22/02/2026",
+      "isoDate": "2026-02-22",
+      "time": "06:20",
+      "weight": 78.6,
+      "weekTag": "שבוע 32",
+      "note": ""
+    },
+    {
+      "rowIndex": 222,
+      "date": "23/02/2026",
+      "isoDate": "2026-02-23",
+      "time": "07:42",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 223,
+      "date": "24/02/2026",
+      "isoDate": "2026-02-24",
+      "time": "07:27",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 224,
+      "date": "25/02/2026",
+      "isoDate": "2026-02-25",
+      "time": "09:00",
+      "weight": 77.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 225,
+      "date": "26/02/2026",
+      "isoDate": "2026-02-26",
+      "time": "08:17",
+      "weight": 78.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 226,
+      "date": "27/02/2026",
+      "isoDate": "2026-02-27",
+      "time": "",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 227,
+      "date": "28/02/2026",
+      "isoDate": "2026-02-28",
+      "time": "09:17",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 228,
+      "date": "01/03/2026",
+      "isoDate": "2026-03-01",
+      "time": "09:53",
+      "weight": 78.3,
+      "weekTag": "שבוע 33",
+      "note": ""
+    },
+    {
+      "rowIndex": 229,
+      "date": "02/03/2026",
+      "isoDate": "2026-03-02",
+      "time": "07:30",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 230,
+      "date": "03/03/2026",
+      "isoDate": "2026-03-03",
+      "time": "09:29",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 231,
+      "date": "04/03/2026",
+      "isoDate": "2026-03-04",
+      "time": "09:30",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 232,
+      "date": "05/03/2026",
+      "isoDate": "2026-03-05",
+      "time": "09:20",
+      "weight": 78.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 233,
+      "date": "06/03/2026",
+      "isoDate": "2026-03-06",
+      "time": "09:30",
+      "weight": 78.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 234,
+      "date": "07/03/2026",
+      "isoDate": "2026-03-07",
+      "time": "10:35",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 235,
+      "date": "08/03/2026",
+      "isoDate": "2026-03-08",
+      "time": "09:04",
+      "weight": 78.2,
+      "weekTag": "שבוע 34",
+      "note": ""
+    },
+    {
+      "rowIndex": 236,
+      "date": "09/03/2026",
+      "isoDate": "2026-03-09",
+      "time": "08:10",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 237,
+      "date": "10/03/2026",
+      "isoDate": "2026-03-10",
+      "time": "07:44",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 238,
+      "date": "11/03/2026",
+      "isoDate": "2026-03-11",
+      "time": "06:00",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 239,
+      "date": "12/03/2026",
+      "isoDate": "2026-03-12",
+      "time": "09:30",
+      "weight": 79.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 240,
+      "date": "13/03/2026",
+      "isoDate": "2026-03-13",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 241,
+      "date": "14/03/2026",
+      "isoDate": "2026-03-14",
+      "time": "10:00",
+      "weight": 78.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 242,
+      "date": "15/03/2026",
+      "isoDate": "2026-03-15",
+      "time": "08:00",
+      "weight": 78.9,
+      "weekTag": "שבוע 35",
+      "note": ""
+    },
+    {
+      "rowIndex": 243,
+      "date": "16/03/2026",
+      "isoDate": "2026-03-16",
+      "time": "08:18",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 244,
+      "date": "17/03/2026",
+      "isoDate": "2026-03-17",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 245,
+      "date": "18/03/2026",
+      "isoDate": "2026-03-18",
+      "time": "07:56",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 246,
+      "date": "19/03/2026",
+      "isoDate": "2026-03-19",
+      "time": "09:09",
+      "weight": 79.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 247,
+      "date": "20/03/2026",
+      "isoDate": "2026-03-20",
+      "time": "13:15",
+      "weight": 79.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 248,
+      "date": "21/03/2026",
+      "isoDate": "2026-03-21",
+      "time": "1123",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 249,
+      "date": "22/03/2026",
+      "isoDate": "2026-03-22",
+      "time": "07:40",
+      "weight": 79.8,
+      "weekTag": "שבוע 36",
+      "note": ""
+    },
+    {
+      "rowIndex": 250,
+      "date": "23/03/2026",
+      "isoDate": "2026-03-23",
+      "time": "08:11",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 251,
+      "date": "24/03/2026",
+      "isoDate": "2026-03-24",
+      "time": "08:43",
+      "weight": 80.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 252,
+      "date": "25/03/2026",
+      "isoDate": "2026-03-25",
+      "time": "06:50",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 253,
+      "date": "26/03/2026",
+      "isoDate": "2026-03-26",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 254,
+      "date": "27/03/2026",
+      "isoDate": "2026-03-27",
+      "time": "11:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 255,
+      "date": "28/03/2026",
+      "isoDate": "2026-03-28",
+      "time": "15:22",
+      "weight": 79.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 256,
+      "date": "29/03/2026",
+      "isoDate": "2026-03-29",
+      "time": "10:00",
+      "weight": 79.7,
+      "weekTag": "שבוע 37",
+      "note": ""
+    },
+    {
+      "rowIndex": 257,
+      "date": "30/03/2026",
+      "isoDate": "2026-03-30",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 258,
+      "date": "31/03/2026",
+      "isoDate": "2026-03-31",
+      "time": "10:21",
+      "weight": 77.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 259,
+      "date": "01/04/2026",
+      "isoDate": "2026-04-01",
+      "time": "12:39",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 260,
+      "date": "02/04/2026",
+      "isoDate": "2026-04-02",
+      "time": "11:12",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 261,
+      "date": "03/04/2026",
+      "isoDate": "2026-04-03",
+      "time": "07:39",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 262,
+      "date": "04/04/2026",
+      "isoDate": "2026-04-04",
+      "time": "11:00",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 263,
+      "date": "05/04/2026",
+      "isoDate": "2026-04-05",
+      "time": "10:00",
+      "weight": 78.6,
+      "weekTag": "שבוע 38",
+      "note": ""
+    },
+    {
+      "rowIndex": 264,
+      "date": "06/04/2026",
+      "isoDate": "2026-04-06",
+      "time": "09:31",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 265,
+      "date": "07/04/2026",
+      "isoDate": "2026-04-07",
+      "time": "13:00",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 266,
+      "date": "08/04/2026",
+      "isoDate": "2026-04-08",
+      "time": "12:40",
+      "weight": 78.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 267,
+      "date": "09/04/2026",
+      "isoDate": "2026-04-09",
+      "time": "09:40",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 268,
+      "date": "10/04/2026",
+      "isoDate": "2026-04-10",
+      "time": "09:40",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 269,
+      "date": "11/04/2026",
+      "isoDate": "2026-04-11",
+      "time": "09:40",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 270,
+      "date": "12/04/2026",
+      "isoDate": "2026-04-12",
+      "time": "11:00",
+      "weight": 77.7,
+      "weekTag": "שבוע 39",
+      "note": ""
+    },
+    {
+      "rowIndex": 271,
+      "date": "13/04/2026",
+      "isoDate": "2026-04-13",
+      "time": "08:30",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 272,
+      "date": "14/04/2026",
+      "isoDate": "2026-04-14",
+      "time": "08:40",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 273,
+      "date": "15/04/2026",
+      "isoDate": "2026-04-15",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 274,
+      "date": "16/04/2026",
+      "isoDate": "2026-04-16",
+      "time": "08:40",
+      "weight": 79.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 275,
+      "date": "17/04/2026",
+      "isoDate": "2026-04-17",
+      "time": "10:33",
+      "weight": 79.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 276,
+      "date": "18/04/2026",
+      "isoDate": "2026-04-18",
+      "time": "12:40",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 277,
+      "date": "19/04/2026",
+      "isoDate": "2026-04-19",
+      "time": "08:00",
+      "weight": 79.1,
+      "weekTag": "שבוע 40",
+      "note": ""
+    },
+    {
+      "rowIndex": 278,
+      "date": "20/04/2026",
+      "isoDate": "2026-04-20",
+      "time": "08:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 279,
+      "date": "21/04/2026",
+      "isoDate": "2026-04-21",
+      "time": "08:44",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 280,
+      "date": "22/04/2026",
+      "isoDate": "2026-04-22",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 281,
+      "date": "23/04/2026",
+      "isoDate": "2026-04-23",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 282,
+      "date": "24/04/2026",
+      "isoDate": "2026-04-24",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 283,
+      "date": "25/04/2026",
+      "isoDate": "2026-04-25",
+      "time": "10:00",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 284,
+      "date": "26/04/2026",
+      "isoDate": "2026-04-26",
+      "time": "08:18",
+      "weight": 79.4,
+      "weekTag": "שבוע 41",
+      "note": ""
+    },
+    {
+      "rowIndex": 285,
+      "date": "27/04/2026",
+      "isoDate": "2026-04-27",
+      "time": "08:18",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 286,
+      "date": "28/04/2026",
+      "isoDate": "2026-04-28",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 287,
+      "date": "29/04/2026",
+      "isoDate": "2026-04-29",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 288,
+      "date": "30/04/2026",
+      "isoDate": "2026-04-30",
+      "time": "09:36",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 289,
+      "date": "01/05/2026",
+      "isoDate": "2026-05-01",
+      "time": "09:36",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 290,
+      "date": "02/05/2026",
+      "isoDate": "2026-05-02",
+      "time": "09:36",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 291,
+      "date": "03/05/2026",
+      "isoDate": "2026-05-03",
+      "time": "07:52",
+      "weight": 80.0,
+      "weekTag": "שבוע 42",
+      "note": ""
+    },
+    {
+      "rowIndex": 292,
+      "date": "04/05/2026",
+      "isoDate": "2026-05-04",
+      "time": "07:43",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 293,
+      "date": "05/05/2026",
+      "isoDate": "2026-05-05",
+      "time": "07:30",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 294,
+      "date": "06/05/2026",
+      "isoDate": "2026-05-06",
+      "time": "08:00",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 295,
+      "date": "07/05/2026",
+      "isoDate": "2026-05-07",
+      "time": "08:12",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 296,
+      "date": "08/05/2026",
+      "isoDate": "2026-05-08",
+      "time": "08:00",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 297,
+      "date": "09/05/2026",
+      "isoDate": "2026-05-09",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 298,
+      "date": "10/05/2026",
+      "isoDate": "2026-05-10",
+      "time": "",
+      "weight": null,
+      "weekTag": "שבוע 43",
+      "note": ""
+    },
+    {
+      "rowIndex": 299,
+      "date": "11/05/2026",
+      "isoDate": "2026-05-11",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 300,
+      "date": "12/05/2026",
+      "isoDate": "2026-05-12",
+      "time": "11:00",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 301,
+      "date": "13/05/2026",
+      "isoDate": "2026-05-13",
+      "time": "08:00",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 302,
+      "date": "14/05/2026",
+      "isoDate": "2026-05-14",
+      "time": "07:46",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 303,
+      "date": "15/05/2026",
+      "isoDate": "2026-05-15",
+      "time": "10:00",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 304,
+      "date": "16/05/2026",
+      "isoDate": "2026-05-16",
+      "time": "10:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 305,
+      "date": "17/05/2026",
+      "isoDate": "2026-05-17",
+      "time": "06:50",
+      "weight": 79.5,
+      "weekTag": "שבוע 44",
+      "note": ""
+    },
+    {
+      "rowIndex": 306,
+      "date": "18/05/2026",
+      "isoDate": "2026-05-18",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 307,
+      "date": "19/05/2026",
+      "isoDate": "2026-05-19",
+      "time": "08:40",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 308,
+      "date": "20/05/2026",
+      "isoDate": "2026-05-20",
+      "time": "10:00",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 309,
+      "date": "21/05/2026",
+      "isoDate": "2026-05-21",
+      "time": "10:00",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 310,
+      "date": "22/05/2026",
+      "isoDate": "2026-05-22",
+      "time": "10:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 311,
+      "date": "23/05/2026",
+      "isoDate": "2026-05-23",
+      "time": "12:00",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 312,
+      "date": "24/05/2026",
+      "isoDate": "2026-05-24",
+      "time": "08:00",
+      "weight": 79.0,
+      "weekTag": "שבוע 45",
+      "note": ""
+    },
+    {
+      "rowIndex": 313,
+      "date": "25/05/2026",
+      "isoDate": "2026-05-25",
+      "time": "07:30",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 314,
+      "date": "26/05/2026",
+      "isoDate": "2026-05-26",
+      "time": "07:49",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 315,
+      "date": "27/05/2026",
+      "isoDate": "2026-05-27",
+      "time": "08:00",
+      "weight": 79.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 316,
+      "date": "28/05/2026",
+      "isoDate": "2026-05-28",
+      "time": "07:00",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 317,
+      "date": "29/05/2026",
+      "isoDate": "2026-05-29",
+      "time": "09:00",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 318,
+      "date": "30/05/2026",
+      "isoDate": "2026-05-30",
+      "time": "09:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 319,
+      "date": "31/05/2026",
+      "isoDate": "2026-05-31",
+      "time": "09:13",
+      "weight": 79.7,
+      "weekTag": "שבוע 46",
+      "note": ""
+    },
+    {
+      "rowIndex": 320,
+      "date": "01/06/2026",
+      "isoDate": "2026-06-01",
+      "time": "06:20",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 321,
+      "date": "02/06/2026",
+      "isoDate": "2026-06-02",
+      "time": "08:00",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 322,
+      "date": "03/06/2026",
+      "isoDate": "2026-06-03",
+      "time": "08:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 323,
+      "date": "04/06/2026",
+      "isoDate": "2026-06-04",
+      "time": "09:20",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 324,
+      "date": "05/06/2026",
+      "isoDate": "2026-06-05",
+      "time": "10:27",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 325,
+      "date": "06/06/2026",
+      "isoDate": "2026-06-06",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 326,
+      "date": "07/06/2026",
+      "isoDate": "2026-06-07",
+      "time": "08:00",
+      "weight": 79.1,
+      "weekTag": "שבוע 47",
+      "note": ""
+    },
+    {
+      "rowIndex": 327,
+      "date": "08/06/2026",
+      "isoDate": "2026-06-08",
+      "time": "08:00",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 328,
+      "date": "09/06/2026",
+      "isoDate": "2026-06-09",
+      "time": "07:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 329,
+      "date": "10/06/2026",
+      "isoDate": "2026-06-10",
+      "time": "07:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 330,
+      "date": "11/06/2026",
+      "isoDate": "2026-06-11",
+      "time": "07:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 331,
+      "date": "12/06/2026",
+      "isoDate": "2026-06-12",
+      "time": "07:30",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 332,
+      "date": "13/06/2026",
+      "isoDate": "2026-06-13",
+      "time": "10:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 333,
+      "date": "14/06/2026",
+      "isoDate": "2026-06-14",
+      "time": "07:20",
+      "weight": 79.2,
+      "weekTag": "שבוע 48",
+      "note": ""
+    },
+    {
+      "rowIndex": 334,
+      "date": "15/06/2026",
+      "isoDate": "2026-06-15",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 335,
+      "date": "16/06/2026",
+      "isoDate": "2026-06-16",
+      "time": "08:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 336,
+      "date": "17/06/2026",
+      "isoDate": "2026-06-17",
+      "time": "08:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 337,
+      "date": "18/06/2026",
+      "isoDate": "2026-06-18",
+      "time": "08:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 338,
+      "date": "19/06/2026",
+      "isoDate": "2026-06-19",
+      "time": "10:00",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 339,
+      "date": "20/06/2026",
+      "isoDate": "2026-06-20",
+      "time": "08:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 340,
+      "date": "21/06/2026",
+      "isoDate": "2026-06-21",
+      "time": "07:27",
+      "weight": 79.7,
+      "weekTag": "שבוע 49",
+      "note": ""
+    },
+    {
+      "rowIndex": 341,
+      "date": "22/06/2026",
+      "isoDate": "2026-06-22",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 342,
+      "date": "23/06/2026",
+      "isoDate": "2026-06-23",
+      "time": "08:05",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 343,
+      "date": "24/06/2026",
+      "isoDate": "2026-06-24",
+      "time": "08:00",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 344,
+      "date": "25/06/2026",
+      "isoDate": "2026-06-25",
+      "time": "07:30",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 345,
+      "date": "26/06/2026",
+      "isoDate": "2026-06-26",
+      "time": "07:30",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 346,
+      "date": "27/06/2026",
+      "isoDate": "2026-06-27",
+      "time": "07:30",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 347,
+      "date": "28/06/2026",
+      "isoDate": "2026-06-28",
+      "time": "08:00",
+      "weight": 79.4,
+      "weekTag": "שבוע 50",
+      "note": ""
+    },
+    {
+      "rowIndex": 348,
+      "date": "29/06/2026",
+      "isoDate": "2026-06-29",
+      "time": "07:00",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 349,
+      "date": "30/06/2026",
+      "isoDate": "2026-06-30",
+      "time": "07:52",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 350,
+      "date": "01/07/2026",
+      "isoDate": "2026-07-01",
+      "time": "07:52",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 351,
+      "date": "02/07/2026",
+      "isoDate": "2026-07-02",
+      "time": "07:52",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 352,
+      "date": "03/07/2026",
+      "isoDate": "2026-07-03",
+      "time": "09:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 353,
+      "date": "04/07/2026",
+      "isoDate": "2026-07-04",
+      "time": "09:40",
+      "weight": 79.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 354,
+      "date": "05/07/2026",
+      "isoDate": "2026-07-05",
+      "time": "08:00",
+      "weight": 79.5,
+      "weekTag": "שבוע 51",
+      "note": ""
+    },
+    {
+      "rowIndex": 355,
+      "date": "06/07/2026",
+      "isoDate": "2026-07-06",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 356,
+      "date": "07/07/2026",
+      "isoDate": "2026-07-07",
+      "time": "07:43",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 357,
+      "date": "08/07/2026",
+      "isoDate": "2026-07-08",
+      "time": "07:14",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 358,
+      "date": "09/07/2026",
+      "isoDate": "2026-07-09",
+      "time": "07:00",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 359,
+      "date": "10/07/2026",
+      "isoDate": "2026-07-10",
+      "time": "10:00",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 360,
+      "date": "11/07/2026",
+      "isoDate": "2026-07-11",
+      "time": "07:43",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 361,
+      "date": "12/07/2026",
+      "isoDate": "2026-07-12",
+      "time": "07:43",
+      "weight": 78.4,
+      "weekTag": "שבוע 52",
+      "note": ""
+    },
+    {
+      "rowIndex": 362,
+      "date": "13/07/2026",
+      "isoDate": "2026-07-13",
+      "time": "07:43",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 363,
+      "date": "14/07/2026",
+      "isoDate": "2026-07-14",
+      "time": "07:30",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 364,
+      "date": "15/07/2026",
+      "isoDate": "2026-07-15",
+      "time": "09:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 365,
+      "date": "16/07/2026",
+      "isoDate": "2026-07-16",
+      "time": "09:00",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 366,
+      "date": "17/07/2026",
+      "isoDate": "2026-07-17",
+      "time": "11:00",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 367,
+      "date": "18/07/2026",
+      "isoDate": "2026-07-18",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 368,
+      "date": "19/07/2026",
+      "isoDate": "2026-07-19",
+      "time": "",
+      "weight": null,
+      "weekTag": "שבוע 53",
+      "note": ""
+    },
+    {
+      "rowIndex": 369,
+      "date": "20/07/2026",
+      "isoDate": "2026-07-20",
+      "time": "09:00",
+      "weight": 79.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 370,
+      "date": "21/07/2026",
+      "isoDate": "2026-07-21",
+      "time": "07:31",
+      "weight": 79.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 371,
+      "date": "22/07/2026",
+      "isoDate": "2026-07-22",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 372,
+      "date": "23/07/2026",
+      "isoDate": "2026-07-23",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 373,
+      "date": "24/07/2026",
+      "isoDate": "2026-07-24",
+      "time": "10:00",
+      "weight": 78.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 374,
+      "date": "25/07/2026",
+      "isoDate": "2026-07-25",
+      "time": "11:00",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 375,
+      "date": "26/07/2026",
+      "isoDate": "2026-07-26",
+      "time": "08:50",
+      "weight": 78.7,
+      "weekTag": "שבוע 54",
+      "note": ""
+    },
+    {
+      "rowIndex": 376,
+      "date": "27/07/2026",
+      "isoDate": "2026-07-27",
+      "time": "07:11",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 377,
+      "date": "28/07/2026",
+      "isoDate": "2026-07-28",
+      "time": "08:40",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 378,
+      "date": "29/07/2026",
+      "isoDate": "2026-07-29",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 379,
+      "date": "30/07/2026",
+      "isoDate": "2026-07-30",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 380,
+      "date": "31/07/2026",
+      "isoDate": "2026-07-31",
+      "time": "08:40",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 381,
+      "date": "01/08/2026",
+      "isoDate": "2026-08-01",
+      "time": "08:40",
+      "weight": 77.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 382,
+      "date": "02/08/2026",
+      "isoDate": "2026-08-02",
+      "time": "07:30",
+      "weight": 78.5,
+      "weekTag": "שבוע 55",
+      "note": ""
+    },
+    {
+      "rowIndex": 383,
+      "date": "03/08/2026",
+      "isoDate": "2026-08-03",
+      "time": "09:00",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 384,
+      "date": "04/08/2026",
+      "isoDate": "2026-08-04",
+      "time": "07:50",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 385,
+      "date": "05/08/2026",
+      "isoDate": "2026-08-05",
+      "time": "10:00",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 386,
+      "date": "06/08/2026",
+      "isoDate": "2026-08-06",
+      "time": "09:00",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 387,
+      "date": "07/08/2026",
+      "isoDate": "2026-08-07",
+      "time": "11",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 388,
+      "date": "08/08/2026",
+      "isoDate": "2026-08-08",
+      "time": "10",
+      "weight": 77.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 389,
+      "date": "09/08/2026",
+      "isoDate": "2026-08-09",
+      "time": "07:00",
+      "weight": 78.3,
+      "weekTag": "שבוע 56",
+      "note": ""
+    },
+    {
+      "rowIndex": 390,
+      "date": "10/08/2026",
+      "isoDate": "2026-08-10",
+      "time": "07:00",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 391,
+      "date": "11/08/2026",
+      "isoDate": "2026-08-11",
+      "time": "06:29",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 392,
+      "date": "12/08/2026",
+      "isoDate": "2026-08-12",
+      "time": "06:15",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 393,
+      "date": "13/08/2026",
+      "isoDate": "2026-08-13",
+      "time": "07:00",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 394,
+      "date": "14/08/2026",
+      "isoDate": "2026-08-14",
+      "time": "07:00",
+      "weight": 77.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 395,
+      "date": "15/08/2026",
+      "isoDate": "2026-08-15",
+      "time": "07:00",
+      "weight": 78.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 396,
+      "date": "16/08/2026",
+      "isoDate": "2026-08-16",
+      "time": "06:24",
+      "weight": 78.2,
+      "weekTag": "שבוע 57",
+      "note": ""
+    },
+    {
+      "rowIndex": 397,
+      "date": "17/08/2026",
+      "isoDate": "2026-08-17",
+      "time": "06:28",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 398,
+      "date": "18/08/2026",
+      "isoDate": "2026-08-18",
+      "time": "07:00",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 399,
+      "date": "19/08/2026",
+      "isoDate": "2026-08-19",
+      "time": "07:00",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 400,
+      "date": "20/08/2026",
+      "isoDate": "2026-08-20",
+      "time": "06:24",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 401,
+      "date": "21/08/2026",
+      "isoDate": "2026-08-21",
+      "time": "07:40",
+      "weight": 79.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 402,
+      "date": "22/08/2026",
+      "isoDate": "2026-08-22",
+      "time": "09:00",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 403,
+      "date": "23/08/2026",
+      "isoDate": "2026-08-23",
+      "time": "06:30",
+      "weight": 79.0,
+      "weekTag": "שבוע 58",
+      "note": ""
+    },
+    {
+      "rowIndex": 404,
+      "date": "24/08/2026",
+      "isoDate": "2026-08-24",
+      "time": "06:25",
+      "weight": 79.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 405,
+      "date": "25/08/2026",
+      "isoDate": "2026-08-25",
+      "time": "07:38",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 406,
+      "date": "26/08/2026",
+      "isoDate": "2026-08-26",
+      "time": "05:30",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 407,
+      "date": "27/08/2026",
+      "isoDate": "2026-08-27",
+      "time": "05:30",
+      "weight": 79.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 408,
+      "date": "28/08/2026",
+      "isoDate": "2026-08-28",
+      "time": "08:00",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 409,
+      "date": "29/08/2026",
+      "isoDate": "2026-08-29",
+      "time": "13:40",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 410,
+      "date": "30/08/2026",
+      "isoDate": "2026-08-30",
+      "time": "08:27",
+      "weight": 78.5,
+      "weekTag": "שבוע 58",
+      "note": ""
+    },
+    {
+      "rowIndex": 411,
+      "date": "31/08/2026",
+      "isoDate": "2026-08-31",
+      "time": "08:15",
+      "weight": 78.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 412,
+      "date": "01/09/2026",
+      "isoDate": "2026-09-01",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 413,
+      "date": "02/09/2026",
+      "isoDate": "2026-09-02",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 414,
+      "date": "03/09/2026",
+      "isoDate": "2026-09-03",
+      "time": "06:30",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 415,
+      "date": "04/09/2026",
+      "isoDate": "2026-09-04",
+      "time": "08:50",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 416,
+      "date": "05/09/2026",
+      "isoDate": "2026-09-05",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 417,
+      "date": "06/09/2026",
+      "isoDate": "2026-09-06",
+      "time": "",
+      "weight": null,
+      "weekTag": "שבוע 59",
+      "note": ""
+    },
+    {
+      "rowIndex": 418,
+      "date": "07/09/2026",
+      "isoDate": "2026-09-07",
+      "time": "07:00",
+      "weight": 76.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 419,
+      "date": "08/09/2026",
+      "isoDate": "2026-09-08",
+      "time": "07:00",
+      "weight": 77.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 420,
+      "date": "09/09/2026",
+      "isoDate": "2026-09-09",
+      "time": "06:30",
+      "weight": 77.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 421,
+      "date": "10/09/2026",
+      "isoDate": "2026-09-10",
+      "time": "06:20",
+      "weight": 77.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 422,
+      "date": "11/09/2026",
+      "isoDate": "2026-09-11",
+      "time": "09:00",
+      "weight": 77.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 423,
+      "date": "12/09/2026",
+      "isoDate": "2026-09-12",
+      "time": "10:00",
+      "weight": 78.6,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 424,
+      "date": "13/09/2026",
+      "isoDate": "2026-09-13",
+      "time": "08:30",
+      "weight": 77.8,
+      "weekTag": "שבוע 60",
+      "note": ""
+    },
+    {
+      "rowIndex": 425,
+      "date": "14/09/2026",
+      "isoDate": "2026-09-14",
+      "time": "06:00",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 426,
+      "date": "15/09/2026",
+      "isoDate": "2026-09-15",
+      "time": "06:23",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 427,
+      "date": "16/09/2026",
+      "isoDate": "2026-09-16",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 428,
+      "date": "17/09/2026",
+      "isoDate": "2026-09-17",
+      "time": "06:21",
+      "weight": 78.9,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 429,
+      "date": "18/09/2026",
+      "isoDate": "2026-09-18",
+      "time": "10:33",
+      "weight": 78.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 430,
+      "date": "19/09/2026",
+      "isoDate": "2026-09-19",
+      "time": "09:15",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 431,
+      "date": "20/09/2026",
+      "isoDate": "2026-09-20",
+      "time": "08:30",
+      "weight": 78.3,
+      "weekTag": "שבוע 61",
+      "note": ""
+    },
+    {
+      "rowIndex": 432,
+      "date": "21/09/2026",
+      "isoDate": "2026-09-21",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 433,
+      "date": "22/09/2026",
+      "isoDate": "2026-09-22",
+      "time": "06:24",
+      "weight": 79.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 434,
+      "date": "23/09/2026",
+      "isoDate": "2026-09-23",
+      "time": "07:00",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 435,
+      "date": "24/09/2026",
+      "isoDate": "2026-09-24",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 436,
+      "date": "25/09/2026",
+      "isoDate": "2026-09-25",
+      "time": "06:24",
+      "weight": 77.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 437,
+      "date": "26/09/2026",
+      "isoDate": "2026-09-26",
+      "time": "06:24",
+      "weight": 77.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 438,
+      "date": "27/09/2026",
+      "isoDate": "2026-09-27",
+      "time": "",
+      "weight": 77.8,
+      "weekTag": "שבוע 62",
+      "note": ""
+    },
+    {
+      "rowIndex": 439,
+      "date": "28/09/2026",
+      "isoDate": "2026-09-28",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 440,
+      "date": "29/09/2026",
+      "isoDate": "2026-09-29",
+      "time": "",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 441,
+      "date": "30/09/2026",
+      "isoDate": "2026-09-30",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 442,
+      "date": "01/10/2026",
+      "isoDate": "2026-10-01",
+      "time": "",
+      "weight": 78.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 443,
+      "date": "02/10/2026",
+      "isoDate": "2026-10-02",
+      "time": "08:00",
+      "weight": 78.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 444,
+      "date": "03/10/2026",
+      "isoDate": "2026-10-03",
+      "time": "",
+      "weight": 77.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 445,
+      "date": "04/10/2026",
+      "isoDate": "2026-10-04",
+      "time": "06:20",
+      "weight": 78.2,
+      "weekTag": "שבוע 63",
+      "note": ""
+    },
+    {
+      "rowIndex": 446,
+      "date": "05/10/2026",
+      "isoDate": "2026-10-05",
+      "time": "06:18",
+      "weight": 77.7,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 447,
+      "date": "06/10/2026",
+      "isoDate": "2026-10-06",
+      "time": "06:30",
+      "weight": 78.0,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 448,
+      "date": "07/10/2026",
+      "isoDate": "2026-10-07",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 449,
+      "date": "08/10/2026",
+      "isoDate": "2026-10-08",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 450,
+      "date": "09/10/2026",
+      "isoDate": "2026-10-09",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 451,
+      "date": "10/10/2026",
+      "isoDate": "2026-10-10",
+      "time": "09:20",
+      "weight": 77.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 452,
+      "date": "11/10/2026",
+      "isoDate": "2026-10-11",
+      "time": "06:31",
+      "weight": 78.6,
+      "weekTag": "שבוע 64",
+      "note": ""
+    },
+    {
+      "rowIndex": 453,
+      "date": "12/10/2026",
+      "isoDate": "2026-10-12",
+      "time": "06:35",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 454,
+      "date": "13/10/2026",
+      "isoDate": "2026-10-13",
+      "time": "06:40",
+      "weight": 78.8,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 455,
+      "date": "14/10/2026",
+      "isoDate": "2026-10-14",
+      "time": "06:45",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 456,
+      "date": "15/10/2026",
+      "isoDate": "2026-10-15",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 457,
+      "date": "16/10/2026",
+      "isoDate": "2026-10-16",
+      "time": "07:20",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 458,
+      "date": "17/10/2026",
+      "isoDate": "2026-10-17",
+      "time": "07:20",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 459,
+      "date": "18/10/2026",
+      "isoDate": "2026-10-18",
+      "time": "",
+      "weight": null,
+      "weekTag": "שבוע 64",
+      "note": ""
+    },
+    {
+      "rowIndex": 460,
+      "date": "19/10/2026",
+      "isoDate": "2026-10-19",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 461,
+      "date": "20/10/2026",
+      "isoDate": "2026-10-20",
+      "time": "06:24",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 462,
+      "date": "21/10/2026",
+      "isoDate": "2026-10-21",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 463,
+      "date": "22/10/2026",
+      "isoDate": "2026-10-22",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 464,
+      "date": "23/10/2026",
+      "isoDate": "2026-10-23",
+      "time": "07:40",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 465,
+      "date": "24/10/2026",
+      "isoDate": "2026-10-24",
+      "time": "10:46",
+      "weight": 78.2,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 466,
+      "date": "25/10/2026",
+      "isoDate": "2026-10-25",
+      "time": "",
+      "weight": null,
+      "weekTag": "שבוע 65",
+      "note": ""
+    },
+    {
+      "rowIndex": 467,
+      "date": "26/10/2026",
+      "isoDate": "2026-10-26",
+      "time": "06:25",
+      "weight": 78.5,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 468,
+      "date": "27/10/2026",
+      "isoDate": "2026-10-27",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 469,
+      "date": "28/10/2026",
+      "isoDate": "2026-10-28",
+      "time": "07:38",
+      "weight": 78.3,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 470,
+      "date": "29/10/2026",
+      "isoDate": "2026-10-29",
+      "time": "08:00",
+      "weight": 78.4,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 471,
+      "date": "30/10/2026",
+      "isoDate": "2026-10-30",
+      "time": "08:00",
+      "weight": 79.1,
+      "weekTag": "",
+      "note": ""
+    },
+    {
+      "rowIndex": 472,
+      "date": "31/10/2026",
+      "isoDate": "2026-10-31",
+      "time": "",
+      "weight": null,
+      "weekTag": "",
+      "note": ""
+    }
+  ],
+  "weeklyForecasts": [
+    {
+      "week": 1,
+      "label": "ממוצע שבוע 1",
+      "forecast": 70.0,
+      "sheetActual": 70.93
+    },
+    {
+      "week": 2,
+      "label": "ממוצע שבוע 2",
+      "forecast": 71.43,
+      "sheetActual": 71.91
+    },
+    {
+      "week": 3,
+      "label": "ממוצע שבוע 3",
+      "forecast": 72.42,
+      "sheetActual": 72.36
+    },
+    {
+      "week": 4,
+      "label": "ממוצע שבוע 4",
+      "forecast": 72.87,
+      "sheetActual": 72.77
+    },
+    {
+      "week": 5,
+      "label": "ממוצע שבוע 5",
+      "forecast": 73.28,
+      "sheetActual": 72.87
+    },
+    {
+      "week": 6,
+      "label": "ממוצע שבוע 6",
+      "forecast": 73.38,
+      "sheetActual": 73.4
+    },
+    {
+      "week": 7,
+      "label": "ממוצע שבוע 7",
+      "forecast": 73.91,
+      "sheetActual": 73.89
+    },
+    {
+      "week": 8,
+      "label": "ממוצע שבוע 8",
+      "forecast": 74.4,
+      "sheetActual": 74.57
+    },
+    {
+      "week": 9,
+      "label": "ממוצע שבוע 9",
+      "forecast": 75.09,
+      "sheetActual": 75.66
+    },
+    {
+      "week": 10,
+      "label": "ממוצע שבוע 10",
+      "forecast": 76.19,
+      "sheetActual": 74.94
+    },
+    {
+      "week": 11,
+      "label": "ממוצע שבוע 11",
+      "forecast": 75.47,
+      "sheetActual": 75.95
+    },
+    {
+      "week": 12,
+      "label": "ממוצע שבוע 12",
+      "forecast": 76.48,
+      "sheetActual": 75.86
+    },
+    {
+      "week": 13,
+      "label": "ממוצע שבוע 13",
+      "forecast": 76.39,
+      "sheetActual": 74.82
+    },
+    {
+      "week": 14,
+      "label": "ממוצע שבוע 14",
+      "forecast": 75.34,
+      "sheetActual": 75.8
+    },
+    {
+      "week": 15,
+      "label": "ממוצע שבוע 15",
+      "forecast": 76.33,
+      "sheetActual": 76.06
+    },
+    {
+      "week": 16,
+      "label": "ממוצע שבוע 16",
+      "forecast": 76.59,
+      "sheetActual": 76.71
+    },
+    {
+      "week": 17,
+      "label": "ממוצע שבוע 17",
+      "forecast": 77.25,
+      "sheetActual": 77.44
+    },
+    {
+      "week": 18,
+      "label": "ממוצע שבוע 18",
+      "forecast": 77.98,
+      "sheetActual": 77.63
+    },
+    {
+      "week": 19,
+      "label": "ממוצע שבוע 19",
+      "forecast": 78.18,
+      "sheetActual": 78.23
+    },
+    {
+      "week": 20,
+      "label": "ממוצע שבוע 20",
+      "forecast": 78.78,
+      "sheetActual": 78.31
+    },
+    {
+      "week": 21,
+      "label": "ממוצע שבוע 21",
+      "forecast": 78.86,
+      "sheetActual": 79.21
+    },
+    {
+      "week": 22,
+      "label": "ממוצע שבוע 22",
+      "forecast": 79.77,
+      "sheetActual": 79.44
+    },
+    {
+      "week": 23,
+      "label": "ממוצע שבוע 23",
+      "forecast": 80.0,
+      "sheetActual": 79.6
+    },
+    {
+      "week": 24,
+      "label": "ממוצע שבוע 24",
+      "forecast": 80.16,
+      "sheetActual": 78.87
+    },
+    {
+      "week": 25,
+      "label": "ממוצע שבוע 25",
+      "forecast": 79.42,
+      "sheetActual": 78.55
+    },
+    {
+      "week": 26,
+      "label": "ממוצע שבוע 26",
+      "forecast": 79.1,
+      "sheetActual": 79.0
+    },
+    {
+      "week": 27,
+      "label": "ממוצע שבוע 27",
+      "forecast": 79.55,
+      "sheetActual": 78.39
+    },
+    {
+      "week": 28,
+      "label": "ממוצע שבוע 28",
+      "forecast": 78.93,
+      "sheetActual": 78.66
+    },
+    {
+      "week": 29,
+      "label": "ממוצע שבוע 29",
+      "forecast": 79.21,
+      "sheetActual": 78.76
+    },
+    {
+      "week": 30,
+      "label": "ממוצע שבוע 30",
+      "forecast": 79.31,
+      "sheetActual": 78.46
+    },
+    {
+      "week": 31,
+      "label": "ממוצע שבוע 31",
+      "forecast": 79.01,
+      "sheetActual": 78.51
+    },
+    {
+      "week": 32,
+      "label": "ממוצע שבוע 32",
+      "forecast": 79.06,
+      "sheetActual": 78.17
+    },
+    {
+      "week": 33,
+      "label": "ממוצע שבוע 33",
+      "forecast": 78.72,
+      "sheetActual": 78.59
+    },
+    {
+      "week": 34,
+      "label": "ממוצע שבוע 34",
+      "forecast": 79.14,
+      "sheetActual": 79.0
+    },
+    {
+      "week": 35,
+      "label": "ממוצע שבוע 35",
+      "forecast": 79.55,
+      "sheetActual": 79.3
+    },
+    {
+      "week": 36,
+      "label": "ממוצע שבוע 36",
+      "forecast": 79.86,
+      "sheetActual": 79.52
+    },
+    {
+      "week": 37,
+      "label": "ממוצע שבוע 37",
+      "forecast": 80.07,
+      "sheetActual": 78.7
+    },
+    {
+      "week": 38,
+      "label": "ממוצע שבוע 38",
+      "forecast": 79.25,
+      "sheetActual": 78.69
+    },
+    {
+      "week": 39,
+      "label": "ממוצע שבוע 39",
+      "forecast": 79.24,
+      "sheetActual": 79.0
+    },
+    {
+      "week": 40,
+      "label": "ממוצע שבוע 40",
+      "forecast": 79.55,
+      "sheetActual": 78.98
+    },
+    {
+      "week": 41,
+      "label": "ממוצע שבוע 41",
+      "forecast": 79.53,
+      "sheetActual": 78.98
+    },
+    {
+      "week": 42,
+      "label": "ממוצע שבוע 42",
+      "forecast": 79.53,
+      "sheetActual": 79.42
+    },
+    {
+      "week": 43,
+      "label": "ממוצע שבוע 43",
+      "forecast": 79.97,
+      "sheetActual": 78.94
+    },
+    {
+      "week": 44,
+      "label": "ממוצע שבוע 44",
+      "forecast": 79.49,
+      "sheetActual": 79.37
+    },
+    {
+      "week": 45,
+      "label": "ממוצע שבוע 45",
+      "forecast": 79.92,
+      "sheetActual": 79.33
+    },
+    {
+      "week": 46,
+      "label": "ממוצע שבוע 46",
+      "forecast": 79.88,
+      "sheetActual": 79.37
+    },
+    {
+      "week": 47,
+      "label": "ממוצע שבוע 47",
+      "forecast": 79.92,
+      "sheetActual": 79.2
+    },
+    {
+      "week": 48,
+      "label": "ממוצע שבוע 48",
+      "forecast": 79.75,
+      "sheetActual": 79.17
+    },
+    {
+      "week": 49,
+      "label": "ממוצע שבוע 49",
+      "forecast": 79.72,
+      "sheetActual": 79.13
+    },
+    {
+      "week": 50,
+      "label": "ממוצע שבוע 50",
+      "forecast": 79.69,
+      "sheetActual": 79.34
+    },
+    {
+      "week": 51,
+      "label": "ממוצע שבוע 51",
+      "forecast": 79.9,
+      "sheetActual": 78.83
+    },
+    {
+      "week": 52,
+      "label": "ממוצע שבוע 52",
+      "forecast": 79.39,
+      "sheetActual": 78.78
+    },
+    {
+      "week": 53,
+      "label": "ממוצע שבוע 53",
+      "forecast": 79.33,
+      "sheetActual": 79.05
+    },
+    {
+      "week": 54,
+      "label": "ממוצע שבוע 54",
+      "forecast": 79.6,
+      "sheetActual": 78.5
+    },
+    {
+      "week": 55,
+      "label": "ממוצע שבוע 55",
+      "forecast": 79.05,
+      "sheetActual": 78.43
+    },
+    {
+      "week": 56,
+      "label": "ממוצע שבוע 56",
+      "forecast": 78.98,
+      "sheetActual": 78.37
+    },
+    {
+      "week": 57,
+      "label": "ממוצע שבוע 57",
+      "forecast": 78.92,
+      "sheetActual": 78.63
+    },
+    {
+      "week": 58,
+      "label": "ממוצע שבוע 58",
+      "forecast": 79.18,
+      "sheetActual": 78.97
+    },
+    {
+      "week": 59,
+      "label": "ממוצע שבוע 59",
+      "forecast": 79.52,
+      "sheetActual": 78.43
+    },
+    {
+      "week": 60,
+      "label": "ממוצע שבוע 60",
+      "forecast": 78.97,
+      "sheetActual": 77.65
+    },
+    {
+      "week": 61,
+      "label": "ממוצע שבוע 61",
+      "forecast": 78.19,
+      "sheetActual": 78.4
+    },
+    {
+      "week": 62,
+      "label": "ממוצע שבוע 62",
+      "forecast": 78.95,
+      "sheetActual": 78.16
+    },
+    {
+      "week": 63,
+      "label": "ממוצע שבוע 63",
+      "forecast": 78.71,
+      "sheetActual": 77.98
+    },
+    {
+      "week": 64,
+      "label": "ממוצע שבוע 64",
+      "forecast": 78.53,
+      "sheetActual": 77.93
+    },
+    {
+      "week": 65,
+      "label": "ממוצע שבוע 65",
+      "forecast": 78.47,
+      "sheetActual": 78.47
+    },
+    {
+      "week": 66,
+      "label": "ממוצע שבוע 66",
+      "forecast": 79.02,
+      "sheetActual": 78.57
+    },
+    {
+      "week": 67,
+      "label": "ממוצע שבוע 67",
+      "forecast": 79.12,
+      "sheetActual": null
+    }
+  ],
+  "workouts": [
+    {
+      "id": "ex-2",
+      "rowIndex": 2,
+      "day": "A",
+      "muscle": "ארבע־ראשי (Quad)",
+      "exercise": "סקוואט סמית משין",
+      "currentWeight": "60",
+      "sets": "4",
+      "reps": "6-8",
+      "rir": "1-2",
+      "description": "יורדים כאילו יושבים על כיסא, גב ישר, עולים דרך העקבים.",
+      "cues": "ברכיים מעל האצבעות, גב ניטרלי, נשיפה בעלייה.",
+      "history": [
+        "40",
+        "50"
+      ]
+    },
+    {
+      "id": "ex-3",
+      "rowIndex": 3,
+      "day": "A",
+      "muscle": "שרשרת אחורית",
+      "exercise": "משיכה רגליים מכונה בשכיבה",
+      "currentWeight": "70",
+      "sets": "3",
+      "reps": "8-10",
+      "rir": "1-2",
+      "description": "אגן אחורה, גב שטוח, מתיחה בהמסטרינג – וחוזרים.",
+      "cues": "מוט קרוב לגוף, כיווץ ישבן בעלייה.",
+      "history": [
+        "55",
+        "60",
+        "65"
+      ]
+    },
+    {
+      "id": "ex-4",
+      "rowIndex": 4,
+      "day": "A",
+      "muscle": "ארבע-ראשי / ייצוב",
+      "exercise": "פשיטת רגליים מכונה",
+      "currentWeight": "91",
+      "sets": "3",
+      "reps": "8-10 לכל רגל",
+      "rir": "1-2",
+      "description": "רגל אחורית על ספסל, יורדים עד שהברך כמעט נוגעת ברצפה.",
+      "cues": "לדחוף עקב קדמי, לא לקרוס ברך פנימה.",
+      "history": [
+        "60",
+        "64",
+        "73",
+        "86",
+        "77",
+        "82"
+      ]
+    },
+    {
+      "id": "ex-5",
+      "rowIndex": 5,
+      "day": "A",
+      "muscle": "גב אופקי",
+      "exercise": "חתירה במוט / T-Bar",
+      "currentWeight": "35",
+      "sets": "3",
+      "reps": "8-10",
+      "rir": "1-2",
+      "description": "גוף מעט מוטה, מושכים מוט אל הבטן, סוחטים שכמות.",
+      "cues": "חזה קדימה, למנוע הטיית גב למעלה.",
+      "history": []
+    },
+    {
+      "id": "ex-6",
+      "rowIndex": 6,
+      "day": "A",
+      "muscle": "גב אנכי",
+      "exercise": "פולי עליון",
+      "currentWeight": "75",
+      "sets": "3",
+      "reps": "6-8",
+      "rir": "1-2",
+      "description": "מושכים חזה למוט, שליטה בירידה.",
+      "cues": "מרפקים לצדדים, סנטר מעל המוט.",
+      "history": [
+        "65"
+      ]
+    },
+    {
+      "id": "ex-7",
+      "rowIndex": 7,
+      "day": "A",
+      "muscle": "כנפיים",
+      "exercise": "פולי עליון חבל",
+      "currentWeight": "30",
+      "sets": "2",
+      "reps": "12-15",
+      "rir": "1",
+      "description": "חבל בגובה פנים, מושכים לעיניים, מרפקים החוצה.",
+      "cues": "לסחוט אחורי כתף שנייה אחת.",
+      "history": [
+        "28.5"
+      ]
+    },
+    {
+      "id": "ex-8",
+      "rowIndex": 8,
+      "day": "A",
+      "muscle": "בייספס",
+      "exercise": "כפיפת מרפק במוט",
+      "currentWeight": "30",
+      "sets": "3",
+      "reps": "8-10",
+      "rir": "1",
+      "description": "מרפקים צמודים, מקופפים עד הכתף, יורדים לאט.",
+      "cues": "בלי תנופה, כתפיים רפויות.",
+      "history": [
+        "25"
+      ]
+    },
+    {
+      "id": "ex-9",
+      "rowIndex": 9,
+      "day": "A",
+      "muscle": "בייספס",
+      "exercise": "כפיפת יד קדמית חצי פטיש",
+      "currentWeight": "20",
+      "sets": "2",
+      "reps": "10-12",
+      "rir": "1",
+      "description": "אחיזה ניטרלית, שליטה בירידה.",
+      "cues": "לשמור אמות ניטרליות.",
+      "history": [
+        "15",
+        "17.5"
+      ]
+    },
+    {
+      "id": "ex-10",
+      "rowIndex": 10,
+      "day": "A",
+      "muscle": "ליבה",
+      "exercise": "פלאנק",
+      "currentWeight": "",
+      "sets": "2",
+      "reps": "45-60 ש׳",
+      "rir": "2",
+      "description": "אמות על הרצפה, גוף קו ישר, בטן מכווצת.",
+      "cues": "לכווץ ישבן ובטן, לא לשקוע במותן.",
+      "history": []
+    },
+    {
+      "id": "ex-11",
+      "rowIndex": 11,
+      "day": "B",
+      "muscle": "חזה",
+      "exercise": "לחיצת חזה (מוט/דאמבלים)",
+      "currentWeight": "35",
+      "sets": "3",
+      "reps": "6-8",
+      "rir": "1-2",
+      "description": "שוכבים, חזה מורם, מורידים לקו פטמות, דוחפים למעלה.",
+      "cues": "מרפק 45°, שאיפה בירידה, נשיפה בלחיצה.",
+      "history": [
+        "30",
+        "32.5"
+      ]
+    },
+    {
+      "id": "ex-12",
+      "rowIndex": 12,
+      "day": "B",
+      "muscle": "חזה",
+      "exercise": "לחיצת חזה שיפוע",
+      "currentWeight": "27.5",
+      "sets": "2",
+      "reps": "8-10",
+      "rir": "1-2",
+      "description": "ספסל 30°, ביצוע כמו לחיצה רגילה.",
+      "cues": "כפות רגליים יציבות, לא לנעול מרפקים.",
+      "history": [
+        "25"
+      ]
+    },
+    {
+      "id": "ex-13",
+      "rowIndex": 13,
+      "day": "B",
+      "muscle": "חזה",
+      "exercise": "חזה תחתון מכונה",
+      "currentWeight": "21",
+      "sets": "2",
+      "reps": "8-10",
+      "rir": "",
+      "description": "",
+      "cues": "",
+      "history": [
+        "19.5"
+      ]
+    },
+    {
+      "id": "ex-14",
+      "rowIndex": 14,
+      "day": "B",
+      "muscle": "חזה",
+      "exercise": "חזה עליון מכונה",
+      "currentWeight": "12",
+      "sets": "2",
+      "reps": "6-8",
+      "rir": "",
+      "description": "",
+      "cues": "",
+      "history": [
+        "9",
+        "10.5"
+      ]
+    },
+    {
+      "id": "ex-15",
+      "rowIndex": 15,
+      "day": "B",
+      "muscle": "כתף קדמית",
+      "exercise": "לחיצת כתפיים",
+      "currentWeight": "25",
+      "sets": "3",
+      "reps": "6-8",
+      "rir": "1-2",
+      "description": "דוחפים משקולות מעל הראש, ליבה חזקה, ירידה בשליטה.",
+      "cues": "לא לנעול מרפקים, ראש ניטרלי.",
+      "history": [
+        "20",
+        "22.5"
+      ]
+    },
+    {
+      "id": "ex-16",
+      "rowIndex": 16,
+      "day": "B",
+      "muscle": "כתף אמצעית",
+      "exercise": "הרחקת כתפיים",
+      "currentWeight": "12.5",
+      "sets": "2",
+      "reps": "12-15",
+      "rir": "0-1",
+      "description": "מרימים לצדדים עד גובה כתף, מרפקים מובילים.",
+      "cues": "כף-יד פונה מטה, לא לעבור גובה כתף.",
+      "history": [
+        "10"
+      ]
+    },
+    {
+      "id": "ex-17",
+      "rowIndex": 17,
+      "day": "B",
+      "muscle": "טרייספס",
+      "exercise": "דחיקת מוט למטה",
+      "currentWeight": "27.5",
+      "sets": "3",
+      "reps": "6-8",
+      "rir": "1-2",
+      "description": "יורדים עד מרפק ≈90°, דוחפים למעלה.",
+      "cues": "להטות גוף מעט קדימה, לא לנעול קיצוני.",
+      "history": [
+        "25"
+      ]
+    },
+    {
+      "id": "ex-18",
+      "rowIndex": 18,
+      "day": "B",
+      "muscle": "טרייספס",
+      "exercise": "דחיקת חבל מטה",
+      "currentWeight": "24",
+      "sets": "2",
+      "reps": "10-12",
+      "rir": "1",
+      "description": "מרפקים צמודים, דוחפים חבל ומפצלים בסוף.",
+      "cues": "כתפיים נייחות, פיצול מלא בתחתית.",
+      "history": [
+        "20",
+        "22.5"
+      ]
+    },
+    {
+      "id": "ex-19",
+      "rowIndex": 19,
+      "day": "B",
+      "muscle": "טרייספס",
+      "exercise": "פשיטת מרפק כבל מעל ראש",
+      "currentWeight": "",
+      "sets": "2",
+      "reps": "12-15",
+      "rir": "1",
+      "description": "מרפקים צמודים, מיישרים זרוע מעל הראש.",
+      "cues": "רק תנועה במרפק, לא בכתף.",
+      "history": []
+    },
+    {
+      "id": "ex-20",
+      "rowIndex": 20,
+      "day": "B",
+      "muscle": "חזה (בידוד)",
+      "exercise": "פרפר כבלים / פק-דק",
+      "currentWeight": "",
+      "sets": "2",
+      "reps": "12-15",
+      "rir": "0-1",
+      "description": "זרועות חצי-עיגול, מקרבים כפות ידיים, חוזרים לאט.",
+      "cues": "מרפקים כמעט קבועים, בלי \"משיכה\" אחורה.",
+      "history": []
+    }
+  ],
+  "measurements": [
+    {
+      "date": "13/09/2025",
+      "isoDate": "2025-09-13",
+      "items": {
+        "אמה": {
+          "right": 28.5,
+          "left": 28.5
+        },
+        "יד קדמית": {
+          "right": 31.0,
+          "left": 31.4
+        },
+        "מותן קו טבור": {
+          "right": 86.0,
+          "left": null
+        },
+        "ישבן": {
+          "right": 96.0,
+          "left": null
+        },
+        "קו כתפיים": {
+          "right": 119.5,
+          "left": null
+        },
+        "תאומים גבוה": {
+          "right": 33.0,
+          "left": 34.0
+        },
+        "ירך נמוך": {
+          "right": 38.0,
+          "left": 39.5
+        },
+        "ירך גבוה": {
+          "right": 53.5,
+          "left": 53.5
+        }
+      }
+    },
+    {
+      "date": "25/10/2025",
+      "isoDate": "2025-10-25",
+      "items": {
+        "אמה": {
+          "right": 28.5,
+          "left": 28.0
+        },
+        "יד קדמית": {
+          "right": 31.0,
+          "left": 31.0
+        },
+        "מותן קו טבור": {
+          "right": 86.0,
+          "left": null
+        },
+        "ישבן": {
+          "right": 97.5,
+          "left": null
+        },
+        "קו כתפיים": {
+          "right": 119.5,
+          "left": null
+        },
+        "תאומים גבוה": {
+          "right": 35.0,
+          "left": 34.5
+        },
+        "תאומים נמוך": {
+          "right": 25.5,
+          "left": 25.0
+        },
+        "ירך נמוך": {
+          "right": 40.0,
+          "left": 41.0
+        },
+        "ירך גבוה": {
+          "right": 56.0,
+          "left": 55.0
+        }
+      }
+    },
+    {
+      "date": "17/02/2026",
+      "isoDate": "2026-02-17",
+      "items": {
+        "אמה": {
+          "right": 28.0,
+          "left": 29.0
+        },
+        "יד קדמית": {
+          "right": 32.0,
+          "left": 31.0
+        },
+        "מותן קו טבור": {
+          "right": 87.5,
+          "left": null
+        },
+        "ישבן": {
+          "right": 100.0,
+          "left": null
+        },
+        "תאומים גבוה": {
+          "right": 36.0,
+          "left": 35.0
+        },
+        "תאומים נמוך": {
+          "right": 29.0,
+          "left": 30.0
+        },
+        "ירך נמוך": {
+          "right": 41.0,
+          "left": 42.0
+        },
+        "ירך גבוה": {
+          "right": 58.5,
+          "left": 58.5
+        }
+      }
+    },
+    {
+      "date": "28/03/2026",
+      "isoDate": "2026-03-28",
+      "items": {
+        "אמה": {
+          "right": 28.0,
+          "left": 29.0
+        },
+        "יד קדמית": {
+          "right": 32.5,
+          "left": 33.5
+        },
+        "מותן קו טבור": {
+          "right": 87.5,
+          "left": null
+        },
+        "ישבן": {
+          "right": 98.0,
+          "left": null
+        },
+        "תאומים גבוה": {
+          "right": 34.0,
+          "left": 35.0
+        },
+        "תאומים נמוך": {
+          "right": 29.0,
+          "left": 28.5
+        },
+        "ירך נמוך": {
+          "right": 46.0,
+          "left": 43.0
+        },
+        "ירך גבוה": {
+          "right": 58.0,
+          "left": 57.0
+        }
+      }
+    },
+    {
+      "date": "27/06/2026",
+      "isoDate": "2026-06-27",
+      "items": {
+        "אמה": {
+          "right": 28.0,
+          "left": 29.0
+        },
+        "יד קדמית": {
+          "right": 32.5,
+          "left": 32.6
+        },
+        "מותן קו טבור": {
+          "right": 87.0,
+          "left": null
+        },
+        "ישבן": {
+          "right": 98.0,
+          "left": null
+        },
+        "תאומים גבוה": {
+          "right": 36.0,
+          "left": 35.0
+        },
+        "תאומים נמוך": {
+          "right": 28.5,
+          "left": 28.5
+        },
+        "ירך נמוך": {
+          "right": 41.0,
+          "left": 41.0
+        },
+        "ירך גבוה": {
+          "right": 55.0,
+          "left": 56.0
+        }
+      }
+    }
+  ],
+  "nutrition": [
+    {
+      "time": "07:30",
+      "name": "מים + קפה",
+      "trainDay": "מים + קפה",
+      "restDay": "מים + קפה",
+      "calories": "0",
+      "protein": "0",
+      "details": "כוס מים + קפה של בוקר"
+    },
+    {
+      "time": "08:45",
+      "name": "גיינר-בוקר",
+      "trainDay": "120 ג׳ גיינר",
+      "restDay": "100 ג׳ גיינר",
+      "calories": "460 / 380",
+      "protein": "24 / 20 ג׳",
+      "carbs": "84 / 70 ג׳",
+      "fat": "6 / 5 ג׳",
+      "details": "120 ג׳ גיינר + 250 מ״ל מים (בימי מנוחה: 100 ג׳). אופציה: 250 מ״ל חלב 1% (+50 קק״ל)"
+    },
+    {
+      "time": "10:15",
+      "name": "פרה-אימון",
+      "trainDay": "פסטה + ביצים + גבינה",
+      "restDay": "גיינר ביניים קטן (100 ג׳ ב-11:00)",
+      "calories": "550",
+      "protein": "39 ג׳",
+      "carbs": "70 ג׳",
+      "fat": "17 ג׳",
+      "details": "150 ג׳ פסטה מבושלת (או 200 ג׳ אורז לבן) + 2 ביצים שלמות + 4 חלבונים + 30 ג׳ גבנ״צ 9% + 5 מ״ל שמן זית"
+    },
+    {
+      "time": "11:00-12:00",
+      "name": "אימון כוח",
+      "trainDay": "אימון A / B",
+      "restDay": "מנוחה",
+      "calories": "-",
+      "protein": "-",
+      "details": "אימון לפי התוכנית"
+    },
+    {
+      "time": "12:35",
+      "name": "גיינר-פוסט",
+      "trainDay": "150 ג׳ גיינר + בננה",
+      "restDay": "—",
+      "calories": "650",
+      "protein": "31 ג׳",
+      "carbs": "125 ג׳",
+      "fat": "8 ג׳",
+      "details": "150 ג׳ גיינר + בננה בינונית + 250 מ״ל מים + קוביות קרח"
+    },
+    {
+      "time": "15:30",
+      "name": "אורז + טונה",
+      "trainDay": "אורז + טונה + טחינה",
+      "restDay": "אורז + טונה (בשבת: שייק הצלה 130 ג׳)",
+      "calories": "490",
+      "protein": "34 ג׳",
+      "carbs": "65 ג׳",
+      "fat": "12 ג׳",
+      "details": "200 ג׳ אורז לבן מבושל + קופסת טונה במים + 10 ג׳ טחינה גולמית (חלופה: 250 ג׳ פירה / סלמון)"
+    },
+    {
+      "time": "18:30",
+      "name": "פסטה/אורז + קוטג׳",
+      "trainDay": "200 ג׳ פסטה/אורז + קוטג׳",
+      "restDay": "200 ג׳ פסטה/אורז + קוטג׳",
+      "calories": "640",
+      "protein": "30 ג׳",
+      "carbs": "70 ג׳",
+      "fat": "21 ג׳",
+      "details": "200 ג׳ פסטה/אורז מבושל + 250 ג׳ קוטג׳ 5% (או ריקוטה/גבינה 5%) + 10 מ״ל שמן זית"
+    },
+    {
+      "time": "21:30",
+      "name": "נשנוש לילה",
+      "trainDay": "יוגורט + גרנולה + דבש",
+      "restDay": "יוגורט + גרנולה + דבש",
+      "calories": "215",
+      "protein": "9 ג׳",
+      "carbs": "40 ג׳",
+      "fat": "4 ג׳",
+      "details": "יוגורט 3% / סקייר 150 ג׳ + 25 ג׳ גרנולה + 10 ג׳ דבש (חלופה מלוחה: קרקר כוסמין + 60 ג׳ קוטג׳)"
+    }
+  ],
+  "creatineLogs": [
+    {
+      "date": "01/09/2025",
+      "grams": 12.0
+    },
+    {
+      "date": "02/09/2025",
+      "grams": 21.0
+    },
+    {
+      "date": "03/09/2025",
+      "grams": 21.0
+    },
+    {
+      "date": "04/09/2025",
+      "grams": 18.0
+    },
+    {
+      "date": "06/09/2025",
+      "grams": 18.0
+    },
+    {
+      "date": "07/09/2025",
+      "grams": 18.0
+    },
+    {
+      "date": "08/09/2025",
+      "grams": 18.0
+    },
+    {
+      "date": "09/09/2025",
+      "grams": 6.0
+    }
+  ]
+}
