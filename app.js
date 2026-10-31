@@ -1,4 +1,4 @@
-// Yarin Fit — Apple Health / Notion Warm Editorial Edition
+// Yarin Fit — Apple Health / Notion Warm Editorial Edition with Advanced Analytics
 
 let appData = {
   startWeight: 70.0,
@@ -12,6 +12,10 @@ let appData = {
 };
 
 let currentChartRange = '30d';
+let currentChartMode = 'daily'; // 'daily' | 'weekly' | 'monthly'
+let chartLayers = { raw: true, ma7: true, forecast: false };
+let compareMode = 'months'; // 'months' | 'weeks'
+
 let weightChartInstance = null;
 let measurementChartInstance = null;
 let selectedMeasurementIdx = 0;
@@ -29,6 +33,17 @@ const BODY_PARTS = [
   { key: "ירך נמוך", dual: true },
   { key: "ירך גבוה", dual: true }
 ];
+
+const HEBREW_MONTHS = {
+  '01': 'ינו׳', '02': 'פבר׳', '03': 'מרץ', '04': 'אפר׳',
+  '05': 'מאי', '06': 'יוני', '07': 'יולי', '08': 'אוג׳',
+  '09': 'ספט׳', '10': 'אוק׳', '11': 'נוב׳', '12': 'דצמ׳'
+};
+
+function formatMonthLabel(ym) {
+  const [y, m] = ym.split('-');
+  return `${HEBREW_MONTHS[m] || m} ${y.slice(2)}`;
+}
 
 function getTodayIso() {
   const now = new Date();
@@ -72,7 +87,6 @@ function saveCloudWebhook() {
 }
 
 async function syncToCloudOrLocal(endpoint, payload) {
-  // 1. Try local Mac server first (if on home Wi-Fi / Mac)
   try {
     const res = await fetch(endpoint, {
       method: 'POST',
@@ -85,7 +99,6 @@ async function syncToCloudOrLocal(endpoint, payload) {
     }
   } catch (e) {}
 
-  // 2. Try Google Apps Script Cloud Webhook (works anywhere on 5G/abroad)
   const webhook = getCloudWebhookUrl();
   if (webhook) {
     try {
@@ -108,28 +121,23 @@ async function initApp() {
   const webhookInput = document.getElementById('cloudWebhookInput');
   if (webhookInput && savedWebhook) webhookInput.value = savedWebhook;
 
-  // Load from server or static data.json, merge with local changes
-  let baseData = null;
-  try {
-    const res = await fetch('./api/data');
-    if (res.ok) baseData = await res.json();
-  } catch (err) {
+  let baseData = window.__EMBEDDED_DATA__ || null;
+  if (!baseData) {
+    try {
+      const res = await fetch('./api/data');
+      if (res.ok) baseData = await res.json();
+    } catch (err) {}
+  }
+  if (!baseData) {
     try {
       const res2 = await fetch('./data.json');
       if (res2.ok) baseData = await res2.json();
     } catch (e2) {}
   }
-  if (!baseData) {
-    try {
-      const res3 = await fetch('./data.json');
-      if (res3.ok) baseData = await res3.json();
-    } catch (e3) {}
-  }
 
   const cachedStr = localStorage.getItem('yarin_fit_backup_v2');
   if (baseData && cachedStr) {
     const cached = JSON.parse(cachedStr);
-    // Keep whichever has more recent weight entries
     appData = baseData;
     (cached.weightEntries || []).forEach(ce => {
       if (ce.weight !== null && ce.weight !== undefined) {
@@ -159,12 +167,15 @@ async function initApp() {
   selectedMeasurementIdx = Math.max(0, (appData.measurements || []).length - 1);
 
   populateDateLogForm(todayIso);
+  initComparisonSelectors();
   renderAll();
 }
 
 function renderAll() {
   renderKPIsAndSummary();
+  renderMonthlyProgression();
   renderWeightChart();
+  renderComparisonResult();
   renderWeightHistory();
   renderMeasurementsTab();
   renderWorkoutsTab();
@@ -172,13 +183,93 @@ function renderAll() {
   lucide.createIcons();
 }
 
-// ==================== WEIGHT TRACKER LOGIC ====================
+// ==================== DATA AGGREGATION HELPERS ====================
 
 function getFilledWeightEntries() {
   return (appData.weightEntries || [])
     .filter(e => e.weight !== null && e.weight !== undefined && !isNaN(e.weight))
     .sort((a, b) => a.isoDate.localeCompare(b.isoDate));
 }
+
+function getWeekNumberFromStart(isoDate) {
+  const startMs = new Date('2025-07-20').getTime();
+  const curMs = new Date(isoDate).getTime();
+  return Math.max(1, Math.floor((curMs - startMs) / (7 * 24 * 3600 * 1000)) + 1);
+}
+
+function getForecastForDate(isoDate) {
+  const weekNum = getWeekNumberFromStart(isoDate);
+  const fObj = (appData.weeklyForecasts || []).find(f => f.week === weekNum);
+  return fObj ? fObj.forecast : null;
+}
+
+function getMonthlyAggregates() {
+  const filled = getFilledWeightEntries();
+  const map = new Map();
+  filled.forEach(e => {
+    const ym = e.isoDate.slice(0, 7);
+    if (!map.has(ym)) map.set(ym, []);
+    map.get(ym).push(e.weight);
+  });
+
+  const months = [];
+  for (const [ym, weights] of map.entries()) {
+    const avg = weights.reduce((a, b) => a + b, 0) / weights.length;
+    const min = Math.min(...weights);
+    const max = Math.max(...weights);
+    months.push({
+      key: ym,
+      label: formatMonthLabel(ym),
+      avg: Number(avg.toFixed(2)),
+      min: Number(min.toFixed(1)),
+      max: Number(max.toFixed(1)),
+      count: weights.length,
+      first: weights[0],
+      last: weights[weights.length - 1]
+    });
+  }
+  months.forEach((m, i) => {
+    m.diffPrev = i > 0 ? Number((m.avg - months[i - 1].avg).toFixed(2)) : Number((m.avg - (appData.startWeight || 70)).toFixed(2));
+  });
+  return months;
+}
+
+function getWeeklyAggregates() {
+  const filled = getFilledWeightEntries();
+  const map = new Map();
+  filled.forEach(e => {
+    const wNum = getWeekNumberFromStart(e.isoDate);
+    if (!map.has(wNum)) map.set(wNum, { weights: [], firstDate: e.date, lastDate: e.date });
+    const grp = map.get(wNum);
+    grp.weights.push(e.weight);
+    grp.lastDate = e.date;
+  });
+
+  const weeks = [];
+  for (const [wNum, grp] of map.entries()) {
+    const avg = grp.weights.reduce((a, b) => a + b, 0) / grp.weights.length;
+    const min = Math.min(...grp.weights);
+    const max = Math.max(...grp.weights);
+    const fObj = (appData.weeklyForecasts || []).find(f => f.week === wNum);
+    weeks.push({
+      key: String(wNum),
+      week: wNum,
+      label: `שבוע ${wNum} (${grp.firstDate.slice(0, 5)})`,
+      shortLabel: `ש׳ ${wNum}`,
+      avg: Number(avg.toFixed(2)),
+      min: Number(min.toFixed(1)),
+      max: Number(max.toFixed(1)),
+      forecast: fObj ? fObj.forecast : null,
+      dateRange: `${grp.firstDate.slice(0, 5)}–${grp.lastDate.slice(0, 5)}`
+    });
+  }
+  weeks.forEach((w, i) => {
+    w.diffPrev = i > 0 ? Number((w.avg - weeks[i - 1].avg).toFixed(2)) : Number((w.avg - (appData.startWeight || 70)).toFixed(2));
+  });
+  return weeks;
+}
+
+// ==================== DAILY LOGGER ====================
 
 function populateDateLogForm(isoDate) {
   const existing = (appData.weightEntries || []).find(e => e.isoDate === isoDate);
@@ -282,8 +373,11 @@ async function saveDailyWeight() {
   btn.disabled = false;
   btn.innerHTML = `<i data-lucide="check" class="w-4 h-4"></i><span>שמור שקילה</span>`;
   populateDateLogForm(isoDate);
+  initComparisonSelectors();
   renderAll();
 }
+
+// ==================== KPIS, ANALYTICS & CHARTS ====================
 
 function renderKPIsAndSummary() {
   const filled = getFilledWeightEntries();
@@ -310,9 +404,7 @@ function renderKPIsAndSummary() {
   diffEl.className = `mt-1 text-[11px] font-semibold ${diff7 >= 0 ? 'text-[#2D5A43]' : 'text-[#78756E]'}`;
 
   const forecasts = appData.weeklyForecasts || [];
-  const startMs = new Date('2025-07-20').getTime();
-  const latestMs = new Date(latest.isoDate).getTime();
-  const currentWeekNum = Math.max(1, Math.floor((latestMs - startMs) / (7 * 24 * 3600 * 1000)) + 1);
+  const currentWeekNum = getWeekNumberFromStart(latest.isoDate);
   document.getElementById('currentWeekBadge').textContent = `שבוע ${currentWeekNum}`;
 
   const weekForecastObj = forecasts.find(f => f.week === currentWeekNum) || forecasts[forecasts.length - 1];
@@ -325,7 +417,7 @@ function renderKPIsAndSummary() {
   }
 
   const strip = document.getElementById('weeklySummaryStrip');
-  const recentWeeks = forecasts.slice(-16).reverse();
+  const recentWeeks = forecasts.slice(-20).reverse();
   strip.innerHTML = recentWeeks.map(w => {
     const actual = w.week === currentWeekNum ? avg7 : w.sheetActual;
     const forecast = w.forecast;
@@ -349,18 +441,150 @@ function renderKPIsAndSummary() {
   }).join('');
 }
 
+function renderMonthlyProgression() {
+  const months = getMonthlyAggregates().slice().reverse();
+  const strip = document.getElementById('monthlyProgressionStrip');
+  if (!strip) return;
+
+  strip.innerHTML = months.map((m, idx) => {
+    const isLatest = idx === 0;
+    const gainPositive = m.diffPrev >= 0;
+    return `
+      <div class="shrink-0 w-32 rounded-2xl p-3 border ${isLatest ? 'bg-[#EAF1ED]/60 border-[#2D5A43]/30' : 'bg-[#F8F7F3] border-[#EAE8E1]'}">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-extrabold ${isLatest ? 'text-[#2D5A43]' : 'text-[#1C1B18]'}">${m.label}</span>
+          <span class="text-[10px] text-[#78756E]">${m.count} שקילות</span>
+        </div>
+        <div class="my-1.5">
+          <div class="num-font text-lg font-extrabold text-[#1C1B18]">${m.avg.toFixed(2)} <span class="text-[10px] font-normal text-[#78756E]">ק״ג</span></div>
+          <div class="num-font text-[10px] text-[#78756E]">טווח: ${m.min}–${m.max}</div>
+        </div>
+        <div class="num-font text-[11px] font-bold ${gainPositive ? 'text-[#2D5A43]' : 'text-[#D96B43]'}">
+          ${gainPositive ? '+' : ''}${m.diffPrev.toFixed(2)} ק״ג מהחודש הקודם
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function setChartMode(mode) {
+  currentChartMode = mode;
+  ['daily', 'weekly', 'monthly'].forEach(m => {
+    const btn = document.getElementById(`mode-${m}`);
+    if (btn) {
+      btn.className = m === mode
+        ? 'px-2.5 py-1 rounded-lg bg-white text-[#1C1B18] shadow-sm transition'
+        : 'px-2.5 py-1 rounded-lg text-[#78756E] transition';
+    }
+  });
+  const layerControls = document.getElementById('dailyLayerControls');
+  if (layerControls) {
+    layerControls.style.display = mode === 'daily' ? 'flex' : 'none';
+  }
+  renderWeightChart();
+}
+
 function setChartRange(range) {
   currentChartRange = range;
-  ['14d', '30d', '90d', 'all'].forEach(r => {
+  ['14d', '30d', '90d', '180d', 'all'].forEach(r => {
     const btn = document.getElementById(`range-${r}`);
-    if (r === range) {
-      btn.className = 'px-2.5 py-1 rounded-lg bg-white text-[#1C1B18] shadow-sm transition';
-    } else {
-      btn.className = 'px-2.5 py-1 rounded-lg text-[#78756E] transition';
+    if (btn) {
+      btn.className = r === range
+        ? 'py-1.5 rounded-lg bg-white text-[#1C1B18] shadow-sm transition'
+        : 'py-1.5 rounded-lg text-[#78756E] transition';
     }
   });
   renderWeightChart();
 }
+
+function toggleChartLayer(layerKey) {
+  chartLayers[layerKey] = !chartLayers[layerKey];
+  // Ensure at least one layer stays active
+  if (!chartLayers.raw && !chartLayers.ma7 && !chartLayers.forecast) {
+    chartLayers.raw = true;
+  }
+  updateLayerButtonsUI();
+  renderWeightChart();
+}
+
+function updateLayerButtonsUI() {
+  const rawBtn = document.getElementById('layer-raw');
+  const ma7Btn = document.getElementById('layer-ma7');
+  const fBtn = document.getElementById('layer-forecast');
+
+  if (rawBtn) {
+    rawBtn.className = chartLayers.raw
+      ? 'flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-[#EAF1ED] text-[#2D5A43] border border-[#2D5A43]/25 transition'
+      : 'flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold subtle-pill text-[#78756E] opacity-60 transition';
+  }
+  if (ma7Btn) {
+    ma7Btn.className = chartLayers.ma7
+      ? 'flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-[#FDF0EB] text-[#D96B43] border border-[#D96B43]/25 transition'
+      : 'flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold subtle-pill text-[#78756E] opacity-60 transition';
+  }
+  if (fBtn) {
+    fBtn.className = chartLayers.forecast
+      ? 'flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-[#E8E6DF] text-[#1C1B18] border border-[#78756E]/30 transition'
+      : 'flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold subtle-pill text-[#78756E] opacity-60 transition';
+  }
+}
+
+function updateInspectorBanner(dateLabel, primaryVal, secondaryVal) {
+  const dEl = document.getElementById('inspectorDate');
+  const pEl = document.getElementById('inspectorPrimary');
+  const sEl = document.getElementById('inspectorSecondary');
+  if (dEl) dEl.textContent = dateLabel;
+  if (pEl) pEl.textContent = primaryVal;
+  if (sEl) sEl.textContent = secondaryVal || '';
+}
+
+function updatePeriodStatsStrip(entriesSlice) {
+  if (!entriesSlice || entriesSlice.length === 0) return;
+  const weights = entriesSlice.map(e => e.weight);
+  const firstW = weights[0];
+  const lastW = weights[weights.length - 1];
+  const diff = lastW - firstW;
+
+  const firstMs = new Date(entriesSlice[0].isoDate).getTime();
+  const lastMs = new Date(entriesSlice[entriesSlice.length - 1].isoDate).getTime();
+  const weeksSpan = Math.max(1, (lastMs - firstMs) / (7 * 24 * 3600 * 1000));
+  const weeklyRate = diff / weeksSpan;
+
+  const minW = Math.min(...weights);
+  const maxW = Math.max(...weights);
+
+  const changeEl = document.getElementById('periodChangeVal');
+  changeEl.textContent = `${diff >= 0 ? '+' : ''}${diff.toFixed(1)} ק״ג`;
+  changeEl.className = `num-font text-sm font-extrabold mt-0.5 ${diff >= 0 ? 'text-[#2D5A43]' : 'text-[#D96B43]'}`;
+
+  document.getElementById('periodWeeklyRate').textContent = `${weeklyRate >= 0 ? '+' : ''}${weeklyRate.toFixed(2)}/ש׳`;
+  document.getElementById('periodMinVal').textContent = `${minW.toFixed(1)}`;
+  document.getElementById('periodMaxVal').textContent = `${maxW.toFixed(1)}`;
+}
+
+// Custom vertical crosshair plugin for Chart.js
+const crosshairPlugin = {
+  id: 'crosshairLine',
+  afterDraw(chart) {
+    if (chart.tooltip?._active?.length) {
+      const activePoint = chart.tooltip._active[0];
+      const ctx = chart.ctx;
+      const x = activePoint.element.x;
+      const topY = chart.scales.y.top;
+      const bottomY = chart.scales.y.bottom;
+
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(x, topY);
+      ctx.lineTo(x, bottomY);
+      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = 'rgba(45, 90, 67, 0.35)';
+      ctx.setLineDash([4, 4]);
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+};
 
 function renderWeightChart() {
   const filled = getFilledWeightEntries();
@@ -370,80 +594,305 @@ function renderWeightChart() {
   if (currentChartRange === '14d') sliceCount = 14;
   else if (currentChartRange === '30d') sliceCount = 30;
   else if (currentChartRange === '90d') sliceCount = 90;
+  else if (currentChartRange === '180d') sliceCount = 180;
 
-  const dataSlice = filled.slice(-sliceCount);
-  const labels = dataSlice.map(e => e.date.slice(0, 5));
-  const weights = dataSlice.map(e => e.weight);
-
-  const movingAvg = dataSlice.map(entry => {
-    const globalIdx = filled.indexOf(entry);
-    const windowEntries = filled.slice(Math.max(0, globalIdx - 6), globalIdx + 1);
-    const sum = windowEntries.reduce((s, x) => s + x.weight, 0);
-    return Number((sum / windowEntries.length).toFixed(2));
-  });
+  const dailySlice = filled.slice(-sliceCount);
+  updatePeriodStatsStrip(dailySlice);
 
   const ctx = document.getElementById('weightChart').getContext('2d');
   if (weightChartInstance) weightChartInstance.destroy();
 
-  const grad = ctx.createLinearGradient(0, 0, 0, 200);
-  grad.addColorStop(0, 'rgba(45, 90, 67, 0.16)');
+  const grad = ctx.createLinearGradient(0, 0, 0, 240);
+  grad.addColorStop(0, 'rgba(45, 90, 67, 0.18)');
   grad.addColorStop(1, 'rgba(45, 90, 67, 0.0)');
 
-  weightChartInstance = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels,
-      datasets: [
-        {
-          label: 'משקל יומי',
-          data: weights,
-          borderColor: '#2D5A43',
-          backgroundColor: grad,
-          borderWidth: 2.5,
-          pointRadius: currentChartRange === 'all' ? 0 : 3,
-          pointBackgroundColor: '#2D5A43',
-          tension: 0.35,
-          fill: true
+  if (currentChartMode === 'daily') {
+    const labels = dailySlice.map(e => e.date.slice(0, 5));
+    const fullDates = dailySlice.map(e => e.date);
+    const weights = dailySlice.map(e => e.weight);
+    const notes = dailySlice.map(e => e.note || '');
+
+    const movingAvg = dailySlice.map(entry => {
+      const globalIdx = filled.indexOf(entry);
+      const windowEntries = filled.slice(Math.max(0, globalIdx - 6), globalIdx + 1);
+      const sum = windowEntries.reduce((s, x) => s + x.weight, 0);
+      return Number((sum / windowEntries.length).toFixed(2));
+    });
+
+    const forecasts = dailySlice.map(entry => getForecastForDate(entry.isoDate));
+
+    const lastIdx = dailySlice.length - 1;
+    updateInspectorBanner(
+      `יום ${fullDates[lastIdx]}${notes[lastIdx] ? ' • ' + notes[lastIdx] : ''}`,
+      `${weights[lastIdx].toFixed(1)} ק״ג`,
+      `ממוצע 7 ימים: ${movingAvg[lastIdx].toFixed(2)} ק״ג`
+    );
+
+    const datasets = [];
+    if (chartLayers.raw) {
+      datasets.push({
+        label: 'שקילה יומית',
+        data: weights,
+        borderColor: '#2D5A43',
+        backgroundColor: grad,
+        borderWidth: sliceCount > 120 ? 1.8 : 2.5,
+        pointRadius: sliceCount > 60 ? 0 : 3,
+        pointHoverRadius: 6,
+        pointBackgroundColor: '#2D5A43',
+        tension: 0.3,
+        fill: true
+      });
+    }
+    if (chartLayers.ma7) {
+      datasets.push({
+        label: 'ממוצע נע (7 ימים)',
+        data: movingAvg,
+        borderColor: '#D96B43',
+        borderWidth: 2.5,
+        borderDash: chartLayers.raw ? [5, 4] : [],
+        pointRadius: 0,
+        pointHoverRadius: 5,
+        tension: 0.4,
+        fill: false
+      });
+    }
+    if (chartLayers.forecast) {
+      datasets.push({
+        label: 'תחזית יעד',
+        data: forecasts,
+        borderColor: '#8C887F',
+        borderWidth: 2,
+        borderDash: [3, 3],
+        pointRadius: 0,
+        tension: 0.3,
+        fill: false
+      });
+    }
+
+    weightChartInstance = new Chart(ctx, {
+      type: 'line',
+      data: { labels, datasets },
+      plugins: [crosshairPlugin],
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        onHover: (event, elements) => {
+          if (elements && elements.length > 0) {
+            const idx = elements[0].index;
+            updateInspectorBanner(
+              `יום ${fullDates[idx]}${notes[idx] ? ' • ' + notes[idx] : ''}`,
+              `${weights[idx].toFixed(1)} ק״ג`,
+              `ממוצע נע: ${movingAvg[idx].toFixed(2)} ק״ג`
+            );
+          }
         },
-        {
-          label: 'ממוצע 7 ימים',
-          data: movingAvg,
-          borderColor: '#D96B43',
-          borderDash: [5, 4],
-          borderWidth: 2,
-          pointRadius: 0,
-          tension: 0.4,
-          fill: false
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      interaction: { mode: 'index', intersect: false },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: '#1C1B18',
-          titleFont: { family: 'Assistant', size: 12 },
-          bodyFont: { family: 'Assistant', size: 12 },
-          padding: 10,
-          cornerRadius: 12
-        }
-      },
-      scales: {
-        x: {
-          grid: { display: false },
-          ticks: { color: '#9A978F', font: { family: 'Plus Jakarta Sans', size: 10 }, maxTicksLimit: 6 }
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#1C1B18',
+            titleFont: { family: 'Assistant', size: 12 },
+            bodyFont: { family: 'Assistant', size: 12 },
+            padding: 10,
+            cornerRadius: 12
+          }
         },
-        y: {
-          grid: { color: '#F0EFEA' },
-          ticks: { color: '#78756E', font: { family: 'Plus Jakarta Sans', size: 11 } }
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { color: '#9A978F', font: { family: 'Plus Jakarta Sans', size: 10 }, maxTicksLimit: 6 }
+          },
+          y: {
+            grid: { color: '#F0EFEA' },
+            ticks: { color: '#78756E', font: { family: 'Plus Jakarta Sans', size: 11 } }
+          }
         }
       }
-    }
-  });
+    });
+  } else if (currentChartMode === 'weekly') {
+    const allWeeks = getWeeklyAggregates();
+    const weekCount = currentChartRange === '14d' ? 4 : currentChartRange === '30d' ? 8 : currentChartRange === '90d' ? 16 : currentChartRange === '180d' ? 28 : allWeeks.length;
+    const weekSlice = allWeeks.slice(-weekCount);
+
+    const labels = weekSlice.map(w => w.shortLabel);
+    const avgs = weekSlice.map(w => w.avg);
+    const forecasts = weekSlice.map(w => w.forecast);
+
+    const lastW = weekSlice[weekSlice.length - 1];
+    updateInspectorBanner(
+      lastW.label,
+      `ממוצע: ${lastW.avg.toFixed(2)} ק״ג`,
+      lastW.forecast ? `תחזית: ${lastW.forecast.toFixed(2)} ק״ג` : `טווח: ${lastW.min}–${lastW.max}`
+    );
+
+    weightChartInstance = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'ממוצע שבועי בפועל',
+            data: avgs,
+            borderColor: '#2D5A43',
+            backgroundColor: grad,
+            borderWidth: 3,
+            pointRadius: 4,
+            pointBackgroundColor: '#2D5A43',
+            tension: 0.3,
+            fill: true
+          },
+          {
+            label: 'תחזית שבועית',
+            data: forecasts,
+            borderColor: '#D96B43',
+            borderDash: [5, 4],
+            borderWidth: 2,
+            pointRadius: 2,
+            tension: 0.3,
+            fill: false
+          }
+        ]
+      },
+      plugins: [crosshairPlugin],
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        onHover: (e, el) => {
+          if (el && el.length > 0) {
+            const w = weekSlice[el[0].index];
+            updateInspectorBanner(
+              w.label,
+              `ממוצע: ${w.avg.toFixed(2)} ק״ג`,
+              w.forecast ? `תחזית: ${w.forecast.toFixed(2)} ק״ג (${(w.avg - w.forecast >= 0 ? '+' : '') + (w.avg - w.forecast).toFixed(2)})` : ''
+            );
+          }
+        },
+        plugins: {
+          legend: { display: true, labels: { color: '#57544E', font: { family: 'Assistant', size: 11 }, boxWidth: 12 } },
+          tooltip: { backgroundColor: '#1C1B18', padding: 10, cornerRadius: 12 }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: '#9A978F', font: { size: 10 }, maxTicksLimit: 7 } },
+          y: { grid: { color: '#F0EFEA' }, ticks: { color: '#78756E', font: { size: 11 } } }
+        }
+      }
+    });
+  } else if (currentChartMode === 'monthly') {
+    const months = getMonthlyAggregates();
+    const labels = months.map(m => m.label);
+    const avgs = months.map(m => m.avg);
+
+    const lastM = months[months.length - 1];
+    updateInspectorBanner(
+      `חודש ${lastM.label}`,
+      `ממוצע: ${lastM.avg.toFixed(2)} ק״ג`,
+      `שינוי מחודש קודם: ${lastM.diffPrev >= 0 ? '+' : ''}${lastM.diffPrev.toFixed(2)} ק״ג`
+    );
+
+    weightChartInstance = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'ממוצע חודשי (ק״ג)',
+            data: avgs,
+            backgroundColor: months.map((m, i) => i === months.length - 1 ? '#2D5A43' : '#A3BFA8'),
+            borderRadius: 8
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        onHover: (e, el) => {
+          if (el && el.length > 0) {
+            const m = months[el[0].index];
+            updateInspectorBanner(
+              `חודש ${m.label} (${m.count} שקילות)`,
+              `ממוצע: ${m.avg.toFixed(2)} ק״ג`,
+              `שינוי: ${m.diffPrev >= 0 ? '+' : ''}${m.diffPrev.toFixed(2)} ק״ג`
+            );
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: { backgroundColor: '#1C1B18', padding: 10, cornerRadius: 12 }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: '#57544E', font: { size: 10 } } },
+          y: {
+            min: Math.floor(Math.min(...avgs) - 2),
+            grid: { color: '#F0EFEA' },
+            ticks: { color: '#78756E', font: { size: 11 } }
+          }
+        }
+      }
+    });
+  }
 }
+
+// ==================== PERIOD COMPARISON TOOL ====================
+
+function setCompareMode(mode) {
+  compareMode = mode;
+  document.getElementById('cmp-months').className = mode === 'months'
+    ? 'px-2.5 py-1 rounded-lg bg-white text-[#1C1B18] shadow-sm transition'
+    : 'px-2.5 py-1 rounded-lg text-[#78756E] transition';
+  document.getElementById('cmp-weeks').className = mode === 'weeks'
+    ? 'px-2.5 py-1 rounded-lg bg-white text-[#1C1B18] shadow-sm transition'
+    : 'px-2.5 py-1 rounded-lg text-[#78756E] transition';
+  initComparisonSelectors();
+  renderComparisonResult();
+}
+
+function initComparisonSelectors() {
+  const selA = document.getElementById('compareSelectA');
+  const selB = document.getElementById('compareSelectB');
+  if (!selA || !selB) return;
+
+  const items = compareMode === 'months' ? getMonthlyAggregates() : getWeeklyAggregates();
+  if (items.length === 0) return;
+
+  const optionsHtml = items.map((item, idx) => `<option value="${idx}">${item.label}</option>`).join('');
+  selA.innerHTML = optionsHtml;
+  selB.innerHTML = optionsHtml;
+
+  // Default: compare previous period (or first) with latest period
+  selA.value = String(Math.max(0, items.length - 2));
+  selB.value = String(items.length - 1);
+}
+
+function renderComparisonResult() {
+  const selA = document.getElementById('compareSelectA');
+  const selB = document.getElementById('compareSelectB');
+  if (!selA || !selB) return;
+
+  const items = compareMode === 'months' ? getMonthlyAggregates() : getWeeklyAggregates();
+  const itemA = items[parseInt(selA.value, 10)] || items[0];
+  const itemB = items[parseInt(selB.value, 10)] || items[items.length - 1];
+  if (!itemA || !itemB) return;
+
+  document.getElementById('compareAvgA').textContent = `${itemA.avg.toFixed(2)} ק״ג`;
+  document.getElementById('compareRangeA').textContent = `${itemA.min}–${itemA.max} ק״ג`;
+
+  document.getElementById('compareAvgB').textContent = `${itemB.avg.toFixed(2)} ק״ג`;
+  document.getElementById('compareRangeB').textContent = `${itemB.min}–${itemB.max} ק״ג`;
+
+  const diff = itemB.avg - itemA.avg;
+  const pct = ((diff / itemA.avg) * 100).toFixed(1);
+
+  const box = document.getElementById('compareVerdictBox');
+  const textEl = document.getElementById('compareVerdictText');
+  const diffEl = document.getElementById('compareVerdictDiff');
+
+  textEl.textContent = `שינוי מ-${itemA.label} ל-${itemB.label}:`;
+  diffEl.textContent = `${diff >= 0 ? '+' : ''}${diff.toFixed(2)} ק״ג (${diff >= 0 ? '+' : ''}${pct}%)`;
+  box.className = `rounded-2xl px-4 py-3 flex items-center justify-between text-xs font-bold ${diff >= 0 ? 'bg-[#EAF1ED] text-[#2D5A43]' : 'bg-[#FDF0EB] text-[#D96B43]'}`;
+}
+
+// ==================== WEIGHT HISTORY JOURNAL ====================
 
 function renderWeightHistory() {
   const query = (document.getElementById('historySearchInput').value || '').trim().toLowerCase();
@@ -539,6 +988,31 @@ function renderMeasurementsTab() {
     `;
   }).join('');
 
+  // Render First vs Latest Total Comparison Matrix
+  const firstMeas = list[0];
+  const latestMeas = list[list.length - 1];
+  const subEl = document.getElementById('measOverallSubtitle');
+  if (subEl) subEl.textContent = `השוואה מלאה: ${firstMeas.date} ⬅️ ${latestMeas.date}`;
+
+  const overallGrid = document.getElementById('measOverallComparison');
+  if (overallGrid) {
+    overallGrid.innerHTML = BODY_PARTS.map(part => {
+      const fVal = (firstMeas.items || {})[part.key];
+      const lVal = (latestMeas.items || {})[part.key];
+      if (!fVal || !lVal || !fVal.right || !lVal.right) return '';
+      const diff = lVal.right - fVal.right;
+      return `
+        <div class="bg-[#F8F7F3] border border-[#EAE8E1] rounded-2xl p-3 flex items-center justify-between">
+          <div>
+            <div class="text-xs font-bold text-[#1C1B18]">${part.key}</div>
+            <div class="num-font text-[11px] text-[#78756E] mt-0.5">${fVal.right} ⬅️ <strong class="text-[#1C1B18]">${lVal.right}</strong> ס״מ</div>
+          </div>
+          <span class="num-font text-xs font-extrabold ${diff >= 0 ? 'text-[#2D5A43]' : 'text-[#D96B43]'}">${diff >= 0 ? '+' : ''}${diff.toFixed(1)}</span>
+        </div>
+      `;
+    }).join('');
+  }
+
   renderMeasurementChart();
 }
 
@@ -566,6 +1040,7 @@ function renderMeasurementChart() {
       borderColor: '#2D5A43',
       backgroundColor: 'rgba(45, 90, 67, 0.15)',
       borderWidth: 2.5,
+      pointRadius: 4,
       tension: 0.3
     }
   ];
@@ -577,6 +1052,7 @@ function renderMeasurementChart() {
       borderColor: '#D96B43',
       backgroundColor: 'rgba(217, 107, 67, 0.15)',
       borderWidth: 2.5,
+      pointRadius: 4,
       tension: 0.3
     });
   }
@@ -588,7 +1064,8 @@ function renderMeasurementChart() {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { labels: { color: '#57544E', font: { family: 'Assistant', size: 11 } } }
+        legend: { labels: { color: '#57544E', font: { family: 'Assistant', size: 11 } } },
+        tooltip: { backgroundColor: '#1C1B18', padding: 10, cornerRadius: 12 }
       },
       scales: {
         x: { grid: { display: false }, ticks: { color: '#78756E' } },
@@ -709,8 +1186,9 @@ function renderWorkoutsTab() {
 
       ${w.history && w.history.length > 0 ? `
         <div class="flex items-center gap-1.5 flex-wrap pt-1">
-          <span class="text-[10px] text-[#78756E]">היסטוריה:</span>
-          ${w.history.map(h => `<span class="num-font text-[10px] px-2 py-0.5 rounded-full subtle-pill text-[#57544E] font-semibold">${h} ק״ג</span>`).join('')}
+          <span class="text-[10px] text-[#78756E]">התקדמות משקלים:</span>
+          ${w.history.map(h => `<span class="num-font text-[10px] px-2 py-0.5 rounded-full subtle-pill text-[#57544E] font-semibold">${h} ק״ג</span>`).join(' <span class="text-[#9A978F] text-[10px]">⬅️</span> ')}
+          ${w.currentWeight ? `<span class="text-[#9A978F] text-[10px]">⬅️</span> <span class="num-font text-[10px] px-2 py-0.5 rounded-full bg-[#EAF1ED] text-[#2D5A43] font-extrabold">${w.currentWeight} ק״ג</span>` : ''}
         </div>
       ` : ''}
     </div>

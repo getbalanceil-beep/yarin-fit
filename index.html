@@ -241,23 +241,136 @@
         </button>
       </div>
 
-      <!-- Minimalist Trend Chart Card -->
-      <div class="editorial-card p-5">
-        <div class="flex items-center justify-between mb-4">
-          <div>
-            <h3 class="font-bold text-sm text-[#1C1B18]">מגמת משקל</h3>
-            <p class="text-[11px] text-[#78756E]">קו ירוק: משקל יומי • מקווקו כתום: ממוצע נע (7 ימים)</p>
+      <!-- Interactive Analytics & Trend Explorer Card -->
+      <div class="editorial-card p-5 space-y-4">
+        <!-- Top Row: View Mode Switcher & Range Selector -->
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="font-bold text-base text-[#1C1B18]">ניתוח מגמות והתקדמות</h3>
+              <p class="text-[11px] text-[#78756E]">גע או החלק על הגרף לבדיקת נקודות זמן</p>
+            </div>
+            <!-- Chart Mode Switcher -->
+            <div class="flex subtle-pill p-0.5 rounded-xl text-[11px] font-bold">
+              <button onclick="setChartMode('daily')" id="mode-daily" class="px-2.5 py-1 rounded-lg bg-white text-[#1C1B18] shadow-sm transition">יומי</button>
+              <button onclick="setChartMode('weekly')" id="mode-weekly" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">שבועי</button>
+              <button onclick="setChartMode('monthly')" id="mode-monthly" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">חודשי</button>
+            </div>
           </div>
-          <div class="flex subtle-pill p-0.5 rounded-xl text-[11px] font-bold">
-            <button onclick="setChartRange('14d')" id="range-14d" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">14 י׳</button>
-            <button onclick="setChartRange('30d')" id="range-30d" class="px-2.5 py-1 rounded-lg bg-white text-[#1C1B18] shadow-sm transition">חודש</button>
-            <button onclick="setChartRange('90d')" id="range-90d" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">3 ח׳</button>
-            <button onclick="setChartRange('all')" id="range-all" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">הכל</button>
+
+          <!-- Time Range Filter Bar -->
+          <div class="grid grid-cols-5 subtle-pill p-1 rounded-xl text-[11px] font-bold text-center">
+            <button onclick="setChartRange('14d')" id="range-14d" class="py-1.5 rounded-lg text-[#78756E] transition">שבועיים</button>
+            <button onclick="setChartRange('30d')" id="range-30d" class="py-1.5 rounded-lg bg-white text-[#1C1B18] shadow-sm transition">חודש</button>
+            <button onclick="setChartRange('90d')" id="range-90d" class="py-1.5 rounded-lg text-[#78756E] transition">3 חודשים</button>
+            <button onclick="setChartRange('180d')" id="range-180d" class="py-1.5 rounded-lg text-[#78756E] transition">חצי שנה</button>
+            <button onclick="setChartRange('all')" id="range-all" class="py-1.5 rounded-lg text-[#78756E] transition">הכל</button>
           </div>
         </div>
-        <div class="h-52 w-full relative">
+
+        <!-- Period Summary Highlight Strip (Apple Health Style) -->
+        <div class="grid grid-cols-4 gap-2 bg-[#F8F7F3] border border-[#EAE8E1] rounded-2xl p-3 text-center">
+          <div>
+            <div class="text-[10px] font-semibold text-[#78756E]">שינוי בטווח</div>
+            <div id="periodChangeVal" class="num-font text-sm font-extrabold text-[#2D5A43] mt-0.5">--</div>
+          </div>
+          <div class="border-r border-[#EAE8E1]">
+            <div class="text-[10px] font-semibold text-[#78756E]">קצב שבועי</div>
+            <div id="periodWeeklyRate" class="num-font text-sm font-extrabold text-[#1C1B18] mt-0.5">--</div>
+          </div>
+          <div class="border-r border-[#EAE8E1]">
+            <div class="text-[10px] font-semibold text-[#78756E]">נמוך בטווח</div>
+            <div id="periodMinVal" class="num-font text-sm font-extrabold text-[#1C1B18] mt-0.5">--</div>
+          </div>
+          <div class="border-r border-[#EAE8E1]">
+            <div class="text-[10px] font-semibold text-[#78756E]">גבוה בטווח</div>
+            <div id="periodMaxVal" class="num-font text-sm font-extrabold text-[#1C1B18] mt-0.5">--</div>
+          </div>
+        </div>
+
+        <!-- Interactive Live Inspector Banner (updates when touching chart) -->
+        <div id="chartInspectorBanner" class="flex items-center justify-between px-3.5 py-2 rounded-xl bg-[#EAF1ED]/70 border border-[#2D5A43]/15 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#2D5A43]"></span>
+            <span id="inspectorDate" class="font-bold text-[#1C1B18]">נקודה אחרונה</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="inspectorPrimary" class="num-font font-extrabold text-[#2D5A43]">-- ק״ג</span>
+            <span id="inspectorSecondary" class="num-font text-[11px] font-semibold text-[#D96B43]">--</span>
+          </div>
+        </div>
+
+        <!-- Main Canvas -->
+        <div class="h-64 w-full relative">
           <canvas id="weightChart"></canvas>
         </div>
+
+        <!-- Layer Toggles (Legend Controls) -->
+        <div id="dailyLayerControls" class="flex items-center justify-center gap-2 pt-1 flex-wrap">
+          <button onclick="toggleChartLayer('raw')" id="layer-raw" class="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-[#EAF1ED] text-[#2D5A43] border border-[#2D5A43]/25 transition">
+            <span class="w-2 h-2 rounded-full bg-[#2D5A43]"></span>
+            <span>שקילה יומית</span>
+          </button>
+          <button onclick="toggleChartLayer('ma7')" id="layer-ma7" class="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold bg-[#FDF0EB] text-[#D96B43] border border-[#D96B43]/25 transition">
+            <span class="w-2 h-2 rounded-full bg-[#D96B43]"></span>
+            <span>ממוצע נע (7 ימים)</span>
+          </button>
+          <button onclick="toggleChartLayer('forecast')" id="layer-forecast" class="flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold subtle-pill text-[#78756E] transition">
+            <span class="w-2 h-2 rounded-full bg-[#8C887F]"></span>
+            <span>קו תחזית יעד</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Period Comparison Tool (Compare any 2 months or weeks) -->
+      <div class="editorial-card p-5 space-y-3.5">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="font-bold text-sm text-[#1C1B18]">השוואת תקופות ומגמות</h3>
+            <p class="text-[11px] text-[#78756E]">השווה בין חודשים או שבועות לאורך התהליך</p>
+          </div>
+          <div class="flex subtle-pill p-0.5 rounded-xl text-[11px] font-bold">
+            <button onclick="setCompareMode('months')" id="cmp-months" class="px-2.5 py-1 rounded-lg bg-white text-[#1C1B18] shadow-sm transition">חודשים</button>
+            <button onclick="setCompareMode('weeks')" id="cmp-weeks" class="px-2.5 py-1 rounded-lg text-[#78756E] transition">שבועות</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div class="bg-[#F8F7F3] border border-[#EAE8E1] rounded-2xl p-3">
+            <label class="text-[10px] font-bold text-[#78756E] block mb-1">תקופה א׳ (בסיס)</label>
+            <select id="compareSelectA" onchange="renderComparisonResult()" class="w-full bg-white border border-[#E5E3DC] rounded-xl px-2.5 py-1.5 text-xs font-bold text-[#1C1B18] focus:outline-none"></select>
+            <div class="mt-2 flex items-baseline justify-between">
+              <span id="compareAvgA" class="num-font text-xl font-extrabold text-[#1C1B18]">--</span>
+              <span id="compareRangeA" class="num-font text-[10px] text-[#78756E]">--</span>
+            </div>
+          </div>
+
+          <div class="bg-[#F8F7F3] border border-[#EAE8E1] rounded-2xl p-3">
+            <label class="text-[10px] font-bold text-[#78756E] block mb-1">תקופה ב׳ (מול)</label>
+            <select id="compareSelectB" onchange="renderComparisonResult()" class="w-full bg-white border border-[#E5E3DC] rounded-xl px-2.5 py-1.5 text-xs font-bold text-[#1C1B18] focus:outline-none"></select>
+            <div class="mt-2 flex items-baseline justify-between">
+              <span id="compareAvgB" class="num-font text-xl font-extrabold text-[#2D5A43]">--</span>
+              <span id="compareRangeB" class="num-font text-[10px] text-[#78756E]">--</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="compareVerdictBox" class="rounded-2xl px-4 py-3 bg-[#EAF1ED] text-[#2D5A43] flex items-center justify-between text-xs font-bold">
+          <span id="compareVerdictText">הפרש בין התקופות:</span>
+          <span id="compareVerdictDiff" class="num-font text-sm font-extrabold">+0.00 ק״ג</span>
+        </div>
+      </div>
+
+      <!-- Monthly Breakdown Cards -->
+      <div class="editorial-card p-5">
+        <div class="flex items-center justify-between mb-3">
+          <div>
+            <h3 class="font-bold text-sm text-[#1C1B18]">התקדמות חודשית לאורך הזמן</h3>
+            <p class="text-[11px] text-[#78756E]">ממוצע חודשי ושינוי נטו בכל חודש</p>
+          </div>
+          <span class="text-[11px] font-medium text-[#78756E]">החלק הצידה ⬅️</span>
+        </div>
+        <div id="monthlyProgressionStrip" class="flex gap-2.5 overflow-x-auto pb-1"></div>
       </div>
 
       <!-- Weekly Milestones Horizontal Scroll -->
@@ -301,9 +414,21 @@
         <div id="measurementsGrid" class="divide-y divide-[#F0EFEA]"></div>
       </div>
 
+      <!-- Overall Body Measurements Comparison Matrix (First vs Latest) -->
+      <div class="editorial-card p-5 space-y-3">
+        <div>
+          <h3 class="font-bold text-sm text-[#1C1B18]">סה״כ שינוי מתחילת המדידות</h3>
+          <p id="measOverallSubtitle" class="text-[11px] text-[#78756E]">השוואה בין המדידה הראשונה לאחרונה</p>
+        </div>
+        <div id="measOverallComparison" class="grid grid-cols-2 gap-2"></div>
+      </div>
+
       <div class="editorial-card p-5">
         <div class="flex items-center justify-between mb-3">
-          <h3 class="font-bold text-sm text-[#1C1B18]">מגמה לפי אזור בגוף</h3>
+          <div>
+            <h3 class="font-bold text-sm text-[#1C1B18]">גרף התקדמות היקפים לאורך זמן</h3>
+            <p class="text-[11px] text-[#78756E]">בחר אזור בגוף לצפייה במגמה</p>
+          </div>
           <select id="measChartSelect" onchange="renderMeasurementChart()" class="subtle-pill rounded-xl px-3 py-1.5 text-xs font-bold text-[#1C1B18] focus:outline-none">
             <option value="יד קדמית">יד קדמית</option>
             <option value="אמה">אמה</option>
@@ -314,7 +439,7 @@
             <option value="תאומים גבוה">תאומים גבוה</option>
           </select>
         </div>
-        <div class="h-48 w-full relative">
+        <div class="h-56 w-full relative">
           <canvas id="measurementChart"></canvas>
         </div>
       </div>
